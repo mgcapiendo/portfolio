@@ -18,7 +18,7 @@ export default function Contact() {
               Contact Me
             </h1>
             <p className="text-center font-light">
-              Use the form below to send your message and I'll get back to you shortly!
+              Use the form below to send your message and I will get back to you shortly!
             </p>
 
           </div>
