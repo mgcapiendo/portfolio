@@ -2,11 +2,12 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import clsx from 'clsx'
 import FireFliesBackground from "@/components/FireFliesBackground";
+import AudioPlayer from '@/components/AudioPlayer';
+import WelcomeBubble from '@/components/WelcomeBubble';  // Add this import
 
-
-const inter = Inter({ 
-  subsets: ["latin"], 
-  variable: "--font-inter",
+const inter = Inter({
+   subsets: ["latin"],
+   variable: "--font-inter",
 });
 
 export const metadata = {
@@ -17,9 +18,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={clsx(inter.variable, "bg-background text-foreground font-inter")}> 
-        {children}
-        <FireFliesBackground />
+      <body className={clsx(inter.variable, "bg-background text-foreground font-inter")}>
+         {children}
+         <FireFliesBackground />
+         <AudioPlayer />
+         <WelcomeBubble />  {/* Add this component */}
       </body>
     </html>
   );
