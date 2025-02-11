@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
          {children}
          <FireFliesBackground />
          <AudioPlayer />
-         <WelcomeBubble />  {/* Add this component */}
+         <WelcomeBubble />  
       </body>
     </html>
   );

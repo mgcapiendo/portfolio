@@ -1,4 +1,3 @@
-// NavButton.jsx
 import React from 'react'
 import Link from 'next/link'
 import { Home, Palette, Phone, User, Github, Linkedin, Instagram, Notebook } from 'lucide-react';

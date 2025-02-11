@@ -7,31 +7,31 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily:{
+      fontFamily: {
         inter: ['var(--font-inter)']
       },
-      colors:{
+      colors: {
         background: 'rgb(var(--background))',
         foreground: 'rgb(var(--foreground))',
         muted: 'rgb(var(--muted))',
         accent: 'rgb(var(--accent))',
       },
-      backgroundImage:{
+      backgroundImage: {
         'firefly-radial': "radial-gradient(30% 30% at 50% 50%, rgba(176, 182, 189, 0.7) 0%, rgba(217,217,217, 0) 100%)"
       },
-      boxShadow:{
+      boxShadow: {
         'glass-inset': 'inset 0 17px 5px -9px rgba(228, 140, 41, 0.37)',
         'glass-sm': '5px 5px 20px 0px rgba(190, 118, 34, 0.8)',
       },
-      keyframes:{
-        'spin-reverse':{
-          '0%': {transform: 'rotate(0deg)'},
-          '100%': {transform: 'rotate(-360deg)'}
+      keyframes: {
+        'spin-reverse': {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(-360deg)' }
         }
       },
-      animation:{
-        'spin-slow' : 'spin 40s linear infinite',
-        'spin-slow-reverse' : 'spin-reverse 40s linear infinite',
+      animation: {
+        'spin-slow': 'spin 40s linear infinite',
+        'spin-slow-reverse': 'spin-reverse 40s linear infinite',
       },
       screens: {
         xs: '480px'
