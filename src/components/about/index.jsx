@@ -2,31 +2,31 @@ import React from 'react'
 
 const AboutDetails = () => {
    return (
-       <section className="py-20 w-full max-w-[1800px] mx-auto px-24 space-y-6">
+       <section className="py-20 w-full max-w-[1800px] mx-auto px-4 md:px-8 lg:px-16 xl:px-24 space-y-6">
            {/* Main Intro */}
-           <div className="grid grid-cols-12 gap-6 w-full">
-               <div className="col-span-8 custom-bg px-16 py-12 rounded-2xl flex flex-col justify-between h-80 bg-black/20 backdrop-blur-sm border border-white/10">
+           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full">
+               <div className="lg:col-span-8 custom-bg px-6 md:px-12 lg:px-16 py-12 rounded-2xl flex flex-col justify-between h-auto lg:h-80 bg-black/20 backdrop-blur-sm border border-white/10">
                    <h2 className="text-2xl font-semibold mb-4">Hey! 👋</h2>
                    <div className="space-y-4">
                        <p className="text-lg">Born and raised in West Palm Beach, FL with Filipino roots. I&apos;m a Computer Science student at Florida Atlantic University, but before that I was chasing my Navy dreams in Memphis, TN.</p>
                        <p className="text-lg">Taking a chance on switching to tech turned out to be the best decision ever! Now I&apos;m all in on making an impact and bringing my unique perspective wherever I go.</p>
                    </div>
                </div>
-               <div className="col-span-4 flex flex-col gap-6">
-                   <div className="custom-bg px-16 py-8 rounded-2xl flex flex-col items-center justify-center h-[152px] bg-black/20 backdrop-blur-sm border border-white/10">
-                       <span className="text-3xl font-bold mb-2">Manuel &quot;Chok&quot; Capiendo</span>
+               <div className="lg:col-span-4 flex flex-col gap-6">
+                   <div className="custom-bg px-6 md:px-12 lg:px-16 py-8 rounded-2xl flex flex-col items-center justify-center h-[152px] bg-black/20 backdrop-blur-sm border border-white/10">
+                       <span className="text-3xl font-bold mb-2 text-center">Manuel &quot;Chok&quot; Capiendo</span>
                        <span className="text-lg">21 Years Old</span>
                        <span className="text-sm text-gray-300">Aspiring Software Engineer</span>
                    </div>
-                   <div className="custom-bg px-16 py-8 rounded-2xl flex flex-col items-center justify-center h-[152px] bg-black/20 backdrop-blur-sm border border-white/10">
+                   <div className="custom-bg px-6 md:px-12 lg:px-16 py-8 rounded-2xl flex flex-col items-center justify-center h-[152px] bg-black/20 backdrop-blur-sm border border-white/10">
                        <span className="text-3xl font-bold mb-2">Stay Determined!</span>
                    </div>
                </div>
            </div>
 
            {/* Interests & Life */}
-           <div className="grid grid-cols-12 gap-6 w-full">
-               <div className="col-span-6 custom-bg px-16 py-12 rounded-2xl flex flex-col h-80 bg-black/20 backdrop-blur-sm border border-white/10">
+           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full">
+               <div className="lg:col-span-6 custom-bg px-6 md:px-12 lg:px-16 py-12 rounded-2xl flex flex-col h-auto lg:h-80 bg-black/20 backdrop-blur-sm border border-white/10">
                    <h2 className="text-2xl font-semibold mb-4">🌟 What I&apos;m Up To </h2>
                    <div className="space-y-4">
                        <p className="text-gray-300">• Can&apos;t get enough fish lately! - (no really where are they)</p>
@@ -35,7 +35,7 @@ const AboutDetails = () => {
                        <p className="text-gray-300">• Lifting hard and running slow - perfectly balanced</p>
                    </div>
                </div>
-               <div className="col-span-6 custom-bg px-16 py-12 rounded-2xl flex flex-col h-80 bg-black/20 backdrop-blur-sm border border-white/10">
+               <div className="lg:col-span-6 custom-bg px-6 md:px-12 lg:px-16 py-12 rounded-2xl flex flex-col h-auto lg:h-80 bg-black/20 backdrop-blur-sm border border-white/10">
                    <h2 className="text-2xl font-semibold mb-4">🎲 Fun Facts About Me</h2>
                    <div className="space-y-4">
                        <p className="text-gray-300">• Huge fan of alligators - Florida&apos;s own dinosaurs!</p>
@@ -47,17 +47,17 @@ const AboutDetails = () => {
            </div>
 
            {/* Bottom Row */}
-           <div className="grid grid-cols-12 gap-6 w-full">
-               <div className="col-span-4 custom-bg px-16 py-12 rounded-2xl flex flex-col h-80 bg-black/20 backdrop-blur-sm border border-white/10">
+           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6 w-full">
+               <div className="lg:col-span-4 custom-bg px-6 md:px-12 lg:px-16 py-12 rounded-2xl flex flex-col h-auto lg:h-80 bg-black/20 backdrop-blur-sm border border-white/10">
                    <h2 className="text-2xl font-semibold mb-4">🎯 Current Goals</h2>
                    <ul className="space-y-4">
                        <li className="text-gray-300">• Get super involved with tech and campus events</li>
-                       <li className="text-gray-300">• Start my Github and get projected rolling</li>
+                       <li className="text-gray-300">• Start my Github and get projects rolling</li>
                        <li className="text-gray-300">• Run the Disney Marathon in 2026 </li>
                        <li className="text-gray-300">• Catch a Peacock Bass</li>
                    </ul>
                </div>
-               <div className="col-span-4 custom-bg px-16 py-12 rounded-2xl flex flex-col h-80 bg-black/20 backdrop-blur-sm border border-white/10">
+               <div className="lg:col-span-4 custom-bg px-6 md:px-12 lg:px-16 py-12 rounded-2xl flex flex-col h-auto lg:h-80 bg-black/20 backdrop-blur-sm border border-white/10">
                    <h2 className="text-2xl font-semibold mb-4">🎮 Gaming & Entertainment</h2>
                    <ul className="space-y-4">
                        <li className="text-gray-300">• Waiting for Jurassic Park Survival</li>
@@ -66,7 +66,7 @@ const AboutDetails = () => {
                        <li className="text-gray-300">• Raves are cool but not fun</li>
                    </ul>
                </div>
-               <div className="col-span-4 custom-bg px-16 py-12 rounded-2xl flex flex-col h-80 bg-black/20 backdrop-blur-sm border border-white/10 hover:bg-black/30 transition-all cursor-pointer">
+               <div className="lg:col-span-4 custom-bg px-6 md:px-12 lg:px-16 py-12 rounded-2xl flex flex-col h-auto lg:h-80 bg-black/20 backdrop-blur-sm border border-white/10 hover:bg-black/30 transition-all cursor-pointer">
                    <a href="https://open.spotify.com/user/uw3vphcr4gs6wmvf75saft86w" target="_blank" rel="noopener noreferrer" className="h-full flex flex-col">
                        <h2 className="text-2xl font-semibold mb-4 flex items-center gap-2">
                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-[#1DB954]">
