@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Link from 'next/link'
 import { Home, Palette, Phone, User, Github, Linkedin, Instagram, Notebook } from 'lucide-react';
@@ -31,30 +32,34 @@ const NavButton = ({x, y, label, link, icon, newTab}) => {
             className='absolute cursor-pointer pointer-events-auto z-50'
             style={{transform: `translate(${x}, ${y})`}}
         >
-            <Link 
-                href={link} 
-                target={newTab ? '_blank' : '_self'} 
-                className="text-foreground group rounded-full flex items-center justify-center
-                bg-background/20 border border-accent/30 border-solid backdrop-blur-sm 
-                shadow-glass-inset hover:shadow-glass-sm"
-                aria-label={label} 
-                name={label}
-            >
-                <span className="relative flex items-center justify-center w-10 h-10 md:w-14 md:h-14 
-                    animate-spin-slow-reverse group-hover:pause hover:text-accent">
-                    <div className="w-5 h-5 md:w-6 md:h-6">
-                        {getIcon(icon)}
-                    </div>
+            <div className="animate-spin-slow">
+                <div className="animate-spin-slow-reverse">
+                    <Link 
+                        href={link} 
+                        target={newTab ? '_blank' : '_self'} 
+                        className="text-foreground group rounded-full flex items-center justify-center
+                        bg-background/20 border border-accent/30 border-solid backdrop-blur-sm 
+                        shadow-glass-inset hover:shadow-glass-sm"
+                        aria-label={label} 
+                        name={label}
+                    >
+                        <span className="relative flex items-center justify-center w-10 h-10 md:w-14 md:h-14 
+                            hover:text-accent animate-spin-slow-reverse">
+                            <div className="w-5 h-5 md:w-6 md:h-6">
+                                {getIcon(icon)}
+                            </div>
 
-                    <span className="peer bg-transparent absolute top-0 left-0 w-full h-full"/>
-                
-                    <span className="absolute hidden peer-hover:block px-2 py-1 left-full mx-2 
-                        top-1/2 -translate-y-1/2 bg-background text-foreground text-sm 
-                        rounded-md shadow-lg whitespace-nowrap">
-                        {label}
-                    </span>
-                </span>
-            </Link>
+                            <span className="peer bg-transparent absolute top-0 left-0 w-full h-full"/>
+                        
+                            <span className="absolute hidden peer-hover:block px-2 py-1 left-full mx-2 
+                                top-1/2 -translate-y-1/2 bg-background text-foreground text-sm 
+                                rounded-md shadow-lg whitespace-nowrap">
+                                {label}
+                            </span>
+                        </span>
+                    </Link>
+                </div>
+            </div>
         </div>
     )
 }
