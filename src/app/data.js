@@ -65,7 +65,7 @@ export const BtnList = [
   },
   {
     label: "Resume",
-    link: "/resume.pdf",
+    link: "/ManuelCapiendo_Senior_BSComputerScienceAI_NuclearIT_Integration_Navy.pdf",
     icon: "resume",
     newTab: true,
   },
