@@ -25,41 +25,64 @@ const getIcon = (icon) => {
 }
 
 const NavButton = ({x, y, label, link, icon, newTab}) => {
-    const buttonRef = useRef(null);
     const containerRef = useRef(null);
+    const spinRef = useRef(null);
+    const spinReverseRef = useRef(null);
+
+    const resetAnimations = () => {
+        // Only reset the spin animations, not the container position
+        [spinRef.current, spinReverseRef.current].forEach(element => {
+            if (element) {
+                element.style.animation = 'none';
+                element.offsetHeight;
+                element.style.animation = '';
+            }
+        });
+    };
 
     useEffect(() => {
-        // Force a repaint and ensure proper transform application
         if (containerRef.current) {
-            // Initial positioning
+            // Set initial position
             containerRef.current.style.transform = `translate3d(${x}, ${y}, 0)`;
-            
-            // Force layout recalculation
-            containerRef.current.getBoundingClientRect();
-
-            // Reset animation if needed
-            containerRef.current.style.animation = 'none';
-            containerRef.current.offsetHeight; // Trigger reflow
-            containerRef.current.style.animation = null;
+            containerRef.current.style.WebkitTransform = `translate3d(${x}, ${y}, 0)`;
         }
+        
+        resetAnimations();
 
-        // Handle visibility changes (like when switching tabs on mobile)
         const handleVisibilityChange = () => {
-            if (document.visibilityState === 'visible' && containerRef.current) {
-                // Reset animations when page becomes visible
-                const elements = containerRef.current.getElementsByClassName('animate-spin-slow');
-                Array.from(elements).forEach(element => {
-                    element.style.animation = 'none';
-                    element.offsetHeight;
-                    element.style.animation = null;
-                });
+            if (document.visibilityState === 'visible') {
+                // Ensure position is maintained while resetting animations
+                if (containerRef.current) {
+                    containerRef.current.style.transform = `translate3d(${x}, ${y}, 0)`;
+                    containerRef.current.style.WebkitTransform = `translate3d(${x}, ${y}, 0)`;
+                }
+                resetAnimations();
             }
         };
 
+        const handleFocus = () => {
+            if (containerRef.current) {
+                containerRef.current.style.transform = `translate3d(${x}, ${y}, 0)`;
+                containerRef.current.style.WebkitTransform = `translate3d(${x}, ${y}, 0)`;
+            }
+            resetAnimations();
+        };
+
         document.addEventListener('visibilitychange', handleVisibilityChange);
-        
+        window.addEventListener('focus', handleFocus);
+        window.addEventListener('pageshow', (event) => {
+            if (event.persisted) {
+                if (containerRef.current) {
+                    containerRef.current.style.transform = `translate3d(${x}, ${y}, 0)`;
+                    containerRef.current.style.WebkitTransform = `translate3d(${x}, ${y}, 0)`;
+                }
+                resetAnimations();
+            }
+        });
+
         return () => {
             document.removeEventListener('visibilitychange', handleVisibilityChange);
+            window.removeEventListener('focus', handleFocus);
         };
     }, [x, y]);
 
@@ -79,6 +102,7 @@ const NavButton = ({x, y, label, link, icon, newTab}) => {
             }}
         >
             <div 
+                ref={spinRef}
                 className="animate-spin-slow"
                 style={{
                     transformStyle: 'preserve-3d',
@@ -88,6 +112,7 @@ const NavButton = ({x, y, label, link, icon, newTab}) => {
                 }}
             >
                 <div 
+                    ref={spinReverseRef}
                     className="animate-spin-slow-reverse"
                     style={{
                         transformStyle: 'preserve-3d',
@@ -97,7 +122,6 @@ const NavButton = ({x, y, label, link, icon, newTab}) => {
                     }}
                 >
                     <a 
-                        ref={buttonRef}
                         href={link} 
                         target={newTab ? '_blank' : '_self'} 
                         rel={newTab ? "noopener noreferrer" : undefined}
@@ -105,6 +129,9 @@ const NavButton = ({x, y, label, link, icon, newTab}) => {
                             bg-background/20 border border-accent/30 border-solid backdrop-blur-sm 
                             shadow-glass-inset hover:shadow-glass-sm"
                         aria-label={label}
+                        onClick={() => {
+                            setTimeout(resetAnimations, 0);
+                        }}
                     >
                         <span className="relative flex items-center justify-center w-10 h-10 md:w-14 md:h-14 
                             hover:text-accent animate-spin-slow-reverse"
