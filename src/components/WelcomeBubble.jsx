@@ -32,7 +32,7 @@ const WelcomeBubble = () => {
                     ×
                 </button>
                 <p className="text-sm sm:text-base">
-                    Welcome to my creative space! Feel free to explore and don&apost forget to turn on the sound for the full experience! 🎵
+                    Welcome to my creative space! Feel free to explore and don&apos;t forget to turn on the sound for the full experience! 🎵
                 </p>
             </div>
         </div>
