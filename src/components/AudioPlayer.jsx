@@ -7,28 +7,62 @@ const AudioPlayer = () => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [volume, setVolume] = useState(30);
     const [showVolume, setShowVolume] = useState(false);
+    const [mounted, setMounted] = useState(false);
     const audioRef = useRef(null);
     
     useEffect(() => {
-        audioRef.current = new Audio('/audio/birds39-forest-20772.mp3');
-        audioRef.current.loop = true;
-        audioRef.current.volume = volume / 100;
+        setMounted(true);
+        // Initialize from sessionStorage after mount
+        const storedPlaying = sessionStorage.getItem('audioPlaying');
+        const storedVolume = sessionStorage.getItem('audioVolume');
+        
+        if (storedPlaying !== null) {
+            setIsPlaying(storedPlaying === 'true');
+        }
+        if (storedVolume !== null) {
+            setVolume(parseInt(storedVolume));
+        }
+
+        // Initialize audio
+        if (!audioRef.current) {
+            audioRef.current = new Audio('/audio/birds39-forest-20772.mp3');
+            audioRef.current.loop = true;
+            audioRef.current.volume = (storedVolume ? parseInt(storedVolume) : volume) / 100;
+        }
 
         return () => {
             if (audioRef.current) {
                 audioRef.current.pause();
-                audioRef.current = null;
             }
         };
     }, []);
 
-    const toggleSound = () => {
+    // Handle audio playback after mount
+    useEffect(() => {
+        if (!mounted) return;
+
         if (audioRef.current) {
             if (isPlaying) {
-                audioRef.current.pause();
+                audioRef.current.play().catch(error => console.log('Audio playback failed:', error));
             } else {
-                audioRef.current.play();
+                audioRef.current.pause();
             }
+            sessionStorage.setItem('audioPlaying', isPlaying.toString());
+        }
+    }, [isPlaying, mounted]);
+
+    // Handle volume changes
+    useEffect(() => {
+        if (!mounted) return;
+
+        if (audioRef.current) {
+            audioRef.current.volume = volume / 100;
+            sessionStorage.setItem('audioVolume', volume.toString());
+        }
+    }, [volume, mounted]);
+
+    const toggleSound = () => {
+        if (audioRef.current) {
             setIsPlaying(!isPlaying);
         }
     };
@@ -36,10 +70,9 @@ const AudioPlayer = () => {
     const handleVolumeChange = (e) => {
         const newVolume = Number(e.target.value);
         setVolume(newVolume);
-        if (audioRef.current) {
-            audioRef.current.volume = newVolume / 100;
-        }
     };
+
+    if (!mounted) return null;
 
     return (
         <div 
@@ -47,7 +80,6 @@ const AudioPlayer = () => {
             onMouseEnter={() => setShowVolume(true)}
             onMouseLeave={() => setShowVolume(false)}
         >
-            {/* Volume Slider - appears on hover */}
             <div className={`transition-all duration-300 ${showVolume ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'}`}>
                 <input
                     type="range"
@@ -64,7 +96,6 @@ const AudioPlayer = () => {
                 />
             </div>
 
-            {/* Play/Pause Button */}
             <button
                 onClick={toggleSound}
                 className="p-3 rounded-full bg-background/20 

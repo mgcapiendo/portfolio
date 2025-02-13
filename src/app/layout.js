@@ -3,7 +3,7 @@ import "./globals.css";
 import clsx from 'clsx'
 import FireFliesBackground from "@/components/FireFliesBackground";
 import AudioPlayer from '@/components/AudioPlayer';
-import WelcomeBubble from '@/components/WelcomeBubble';  // Add this import
+import WelcomeBubble from '@/components/WelcomeBubble';
 
 const inter = Inter({
    subsets: ["latin"],

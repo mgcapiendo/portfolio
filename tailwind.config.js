@@ -43,11 +43,24 @@ module.exports = {
             transform: 'rotate(360deg) translateZ(0)',
             WebkitTransform: 'rotate(360deg) translateZ(0)'
           }
+        },
+        'fade-in': {
+          '0%': { 
+            opacity: '0', 
+            transform: 'translateY(10px)',
+            WebkitTransform: 'translateY(10px)'
+          },
+          '100%': { 
+            opacity: '1', 
+            transform: 'translateY(0)',
+            WebkitTransform: 'translateY(0)'
+          }
         }
       },
       animation: {
         'spin-slow': 'spin 40s linear infinite',
         'spin-slow-reverse': 'spin-reverse 40s linear infinite',
+        'fade-in': 'fade-in 0.5s ease-out forwards'
       },
       screens: {
         xs: '480px'
