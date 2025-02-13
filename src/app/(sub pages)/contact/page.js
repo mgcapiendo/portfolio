@@ -11,7 +11,7 @@ export default function Contact() {
         alt="background-image"
         priority 
         sizes="100vw"
-        className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-25"
+        className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-40"
       />
       <article className="relative w-full flex flex-col items-center justify-center space-y-8">
         <div className="flex flex-col items-center justify-center space-y-6 w-3/4">

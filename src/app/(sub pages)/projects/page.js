@@ -15,7 +15,7 @@ export default function Home() {
         sizes="100vw" 
         src={bg} 
         alt="background-image" 
-        className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-25"
+        className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-40"
       />
 
       <div className="flex min-h-screen w-full">

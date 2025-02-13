@@ -17,7 +17,7 @@ export default function Home() {
         sizes="100vw" 
         src={bg} 
         alt="background-image" 
-        className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-25"
+        className="-z-50 fixed top-0 left-0 w-full h-full object-cover object-center opacity-40"
       />
 
       {/* Fixed position for the 3D model to maintain its placement */}
@@ -35,7 +35,7 @@ export default function Home() {
             Manuel Capiendo
           </h1>
           <p className="font-light text-foreground text-lg sm:text-xl md:text-2xl whitespace-nowrap">
-            Driven to Learn
+            Learn More About Me
           </p>
         </div>
         <ScrollIndicator />
