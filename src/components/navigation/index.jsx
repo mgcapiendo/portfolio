@@ -7,6 +7,8 @@ import { motion } from "framer-motion"
 
 const Navigation = () => {
     const [radius, setRadius] = useState('350px');
+    const [isVisible, setIsVisible] = useState(false);
+    const [startOrbit, setStartOrbit] = useState(false);
     
     useEffect(() => {
         const updateRadius = () => {
@@ -26,6 +28,19 @@ const Navigation = () => {
 
         updateRadius();
         window.addEventListener('resize', updateRadius);
+
+        // Start the fade-in sequence
+        setTimeout(() => {
+            setIsVisible(true);
+        }, 100);
+
+        // Start orbiting after all icons have appeared and flashed
+        // Calculate total time: (number of icons * delay between icons) + extra time for last flash
+        const totalAnimationTime = (BtnList.length * 300) + 900;
+        setTimeout(() => {
+            setStartOrbit(true);
+        }, totalAnimationTime);
+
         return () => window.removeEventListener('resize', updateRadius);
     }, []);
 
@@ -35,19 +50,19 @@ const Navigation = () => {
         <div className='w-full fixed inset-0 flex items-center justify-center pointer-events-none'
             style={{ 
                 zIndex: 1000,
-                height: '100dvh' // Use dynamic viewport height
+                height: '100dvh'
             }}
         >
             <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.3 }}
-                className='flex items-center justify-center relative animate-spin-slow'
+                className={`flex items-center justify-center relative ${startOrbit ? 'animate-spin-slow' : ''}`}
                 style={{
-                    position: 'fixed',  // Keep it fixed in viewport
-                    left: '50%',        // Center horizontally
-                    top: '50%',         // Center vertically
-                    transform: 'translate(-50%, -50%)'  // Perfect centering
+                    position: 'fixed',
+                    left: '50%',
+                    top: '50%',
+                    transform: 'translate(-50%, -50%)'
                 }}
             >
                 {BtnList.map((btn, index) => {
@@ -55,7 +70,17 @@ const Navigation = () => {
                     const x = `calc(${radius}*${Math.cos(angleRad)})`;
                     const y = `calc(${radius}*${Math.sin(angleRad)})`;
 
-                    return <NavButton key={btn.label} x={x} y={y} {...btn} />;
+                    return (
+                        <NavButton 
+                            key={btn.label} 
+                            x={x} 
+                            y={y} 
+                            {...btn} 
+                            index={index}
+                            isParentVisible={isVisible}
+                            startOrbit={startOrbit}
+                        />
+                    );
                 })}
             </motion.div>
         </div>

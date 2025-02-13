@@ -1,24 +1,65 @@
-
 "use client"
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useGLTF } from '@react-three/drei';
-import { useFrame } from "@react-three/fiber";
+import { useFrame, useThree } from "@react-three/fiber";
+import * as THREE from 'three';
 
 export default function Wizard(props) {
   const { nodes, materials } = useGLTF('/models/scene-transformed.glb');
+  const modelRef = useRef();
+  const { mouse } = useThree();
+  const [scale, setScale] = useState(1.7);
 
-  const modelRef = useRef()
+  // Handle mouse tracking and floating animation
+  useFrame((state, delta) => {
+    if (!modelRef.current) return;
 
-  useFrame((state, delta, xrFrame) => {
-    modelRef.current.position.y = -1.3 + Math.sin(state.clock.elapsedTime)*0.07;
-  })
+    // Enhanced floating animation
+    const floatingY = -1.4 + Math.sin(state.clock.elapsedTime * 2) * 0.08;
+    
+    // Rotation calculations
+    const targetRotationY = (mouse.x * Math.PI) / 4;
+    const targetRotationX = 0.29 - (mouse.y * Math.PI) / 4;
+    
+    // Apply transformations
+    modelRef.current.position.y = floatingY;
+    modelRef.current.rotation.y = THREE.MathUtils.lerp(
+      modelRef.current.rotation.y,
+      targetRotationY,
+      0.05
+    );
+    modelRef.current.rotation.x = THREE.MathUtils.lerp(
+      modelRef.current.rotation.x,
+      targetRotationX,
+      0.05
+    );
+
+    // Smooth scale transitions
+    modelRef.current.scale.x = THREE.MathUtils.lerp(modelRef.current.scale.x, scale, 0.1);
+    modelRef.current.scale.y = THREE.MathUtils.lerp(modelRef.current.scale.y, scale, 0.1);
+    modelRef.current.scale.z = THREE.MathUtils.lerp(modelRef.current.scale.z, scale, 0.1);
+  });
+
+  const handlePointerOver = () => {
+    setScale(1.8);
+    document.body.style.cursor = 'pointer';
+  };
+
+  const handlePointerOut = () => {
+    setScale(1.7);
+    document.body.style.cursor = 'auto';
+  };
 
   return (
-    <group {...props} dispose={null}
-    ref={modelRef}
-    position={[0,-1.3,0]}
-    scale={[1.7,1.7,1.7]}
-    rotation={[0.29,0,0]}
+    <group
+      {...props}
+      dispose={null}
+      ref={modelRef}
+      position={[0, -1.3, 0]}
+      scale={[1.7, 1.7, 1.7]}
+      rotation={[0.29, 0, 0]}
+      onPointerOver={handlePointerOver}
+      onPointerOut={handlePointerOut}
     >
       <primitive object={nodes.Hips} />
       <skinnedMesh
@@ -85,7 +126,7 @@ export default function Wizard(props) {
         skeleton={nodes.Wolf3D_Body.skeleton}
       />
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/models/scene-transformed.glb')
+useGLTF.preload('/models/scene-transformed.glb');
