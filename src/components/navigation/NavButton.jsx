@@ -1,6 +1,5 @@
 
-import React from 'react'
-import Link from 'next/link'
+import React, { useEffect, useRef } from 'react'
 import { Home, Palette, Phone, User, Github, Linkedin, Instagram, Notebook } from 'lucide-react';
 
 const getIcon = (icon) => {
@@ -27,37 +26,83 @@ const getIcon = (icon) => {
 }
 
 const NavButton = ({x, y, label, link, icon, newTab}) => {
+    const buttonRef = useRef(null);
+
+    useEffect(() => {
+        // Force a repaint on mount to help with animation stability
+        if (buttonRef.current) {
+            buttonRef.current.style.transform = `translate3d(${x}, ${y}, 0)`;
+            buttonRef.current.getBoundingClientRect(); // Force reflow
+        }
+    }, [x, y]);
+
     return (
         <div 
-            className='absolute cursor-pointer pointer-events-auto z-50'
-            style={{transform: `translate(${x}, ${y})`}}
+            ref={buttonRef}
+            className="absolute cursor-pointer pointer-events-auto z-50 will-change-transform"
+            style={{
+                transform: `translate3d(${x}, ${y}, 0)`,
+                perspective: '1000px',
+                WebkitPerspective: '1000px',
+                backfaceVisibility: 'hidden',
+                WebkitBackfaceVisibility: 'hidden',
+                transformStyle: 'preserve-3d',
+                WebkitTransformStyle: 'preserve-3d'
+            }}
         >
-            <div className="animate-spin-slow">
-                <div className="animate-spin-slow-reverse">
-                    <Link 
+            <div 
+                className="animate-spin-slow"
+                style={{
+                    willChange: 'transform',
+                    backfaceVisibility: 'hidden',
+                    WebkitBackfaceVisibility: 'hidden'
+                }}
+            >
+                <div 
+                    className="animate-spin-slow-reverse"
+                    style={{
+                        willChange: 'transform',
+                        backfaceVisibility: 'hidden',
+                        WebkitBackfaceVisibility: 'hidden'
+                    }}
+                >
+                    <a 
                         href={link} 
                         target={newTab ? '_blank' : '_self'} 
+                        rel={newTab ? "noopener noreferrer" : undefined}
                         className="text-foreground group rounded-full flex items-center justify-center
-                        bg-background/20 border border-accent/30 border-solid backdrop-blur-sm 
-                        shadow-glass-inset hover:shadow-glass-sm"
+                            bg-background/20 border border-accent/30 border-solid backdrop-blur-sm 
+                            shadow-glass-inset hover:shadow-glass-sm"
                         aria-label={label} 
-                        name={label}
                     >
                         <span className="relative flex items-center justify-center w-10 h-10 md:w-14 md:h-14 
-                            hover:text-accent animate-spin-slow-reverse">
+                            hover:text-accent animate-spin-slow-reverse"
+                            style={{
+                                willChange: 'transform',
+                                backfaceVisibility: 'hidden',
+                                WebkitBackfaceVisibility: 'hidden'
+                            }}
+                        >
                             <div className="w-5 h-5 md:w-6 md:h-6">
                                 {getIcon(icon)}
                             </div>
 
                             <span className="peer bg-transparent absolute top-0 left-0 w-full h-full"/>
                         
-                            <span className="absolute hidden peer-hover:block px-2 py-1 left-full mx-2 
-                                top-1/2 -translate-y-1/2 bg-background text-foreground text-sm 
-                                rounded-md shadow-lg whitespace-nowrap">
+                            <span 
+                                className="absolute hidden peer-hover:block px-2 py-1 left-full mx-2 
+                                    top-1/2 -translate-y-1/2 bg-background text-foreground text-sm 
+                                    rounded-md shadow-lg whitespace-nowrap"
+                                style={{
+                                    willChange: 'transform',
+                                    backfaceVisibility: 'hidden',
+                                    WebkitBackfaceVisibility: 'hidden'
+                                }}
+                            >
                                 {label}
                             </span>
                         </span>
-                    </Link>
+                    </a>
                 </div>
             </div>
         </div>

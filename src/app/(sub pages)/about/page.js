@@ -3,6 +3,11 @@ import bg from "../../../../public/background/fart.png";
 import RenderModel from "@/components/RenderModel";
 import HatModel from "@/components/models/HatModel";
 import AboutDetails from "@/components/about";
+import dynamic from 'next/dynamic';
+
+const ScrollIndicator = dynamic(() => import('@/components/ScrollIndicator'), {
+  ssr: false
+});
 
 export default function Home() {
   return (
@@ -30,9 +35,10 @@ export default function Home() {
             Manuel Capiendo
           </h1>
           <p className="font-light text-foreground text-lg sm:text-xl md:text-2xl whitespace-nowrap">
-            Where Creativity Grows
+               Where Creativity Grows
           </p>
         </div>
+        <ScrollIndicator />
       </div>
 
       <AboutDetails />

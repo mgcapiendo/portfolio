@@ -62,8 +62,8 @@ const AboutDetails = () => {
                    <ul className="space-y-4">
                        <li className="text-gray-300">• Waiting for Jurassic Park Survival</li>
                        <li className="text-gray-300">• Watching Dexter right now </li>
-                       <li className="text-gray-300">• Outdoor Boys and some lunch </li>
-                       <li className="text-gray-300">• Raves are cool but not fun</li>
+                       <li className="text-gray-300">• Fallout 4 institute route only </li>
+                       <li className="text-gray-300">• Lego games are S-tier</li>
                    </ul>
                </div>
                <div className="lg:col-span-4 custom-bg px-4 sm:px-6 md:px-12 lg:px-16 py-8 sm:py-12 rounded-2xl flex flex-col h-auto lg:h-80 bg-black/20 backdrop-blur-sm border border-white/10 hover:bg-black/30 transition-all cursor-pointer">
