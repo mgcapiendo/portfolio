@@ -25,8 +25,24 @@ module.exports = {
       },
       keyframes: {
         'spin-reverse': {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(-360deg)' }
+          '0%': { 
+            transform: 'rotate(0deg) translateZ(0)',
+            WebkitTransform: 'rotate(0deg) translateZ(0)'
+          },
+          '100%': { 
+            transform: 'rotate(-360deg) translateZ(0)',
+            WebkitTransform: 'rotate(-360deg) translateZ(0)'
+          }
+        },
+        'spin': {
+          '0%': { 
+            transform: 'rotate(0deg) translateZ(0)',
+            WebkitTransform: 'rotate(0deg) translateZ(0)'
+          },
+          '100%': { 
+            transform: 'rotate(360deg) translateZ(0)',
+            WebkitTransform: 'rotate(360deg) translateZ(0)'
+          }
         }
       },
       animation: {

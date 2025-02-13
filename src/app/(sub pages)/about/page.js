@@ -35,7 +35,7 @@ export default function Home() {
             Manuel Capiendo
           </h1>
           <p className="font-light text-foreground text-lg sm:text-xl md:text-2xl whitespace-nowrap">
-               Where Creativity Grows
+            Where Creativity Grows
           </p>
         </div>
         <ScrollIndicator />
