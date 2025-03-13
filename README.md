@@ -1,6 +1,6 @@
-# Portfolio Website
+# [OLD] Portfolio Website (PortfolioSite is my new portfolio)
 
-[OLD] A creative portfolio website built with Next.js, showcasing my work and skills.
+ A creative portfolio website built with Next.js, showcasing my work and skills.
 
 ## Credits and Acknowledgments
 
