@@ -76,6 +76,12 @@
   transform-origin: bottom;
 }
 
+.mountain,
+.mountain2 {
+  will-change: transform;
+  transition: none;
+}
+
 /* ABOUT */
 .about {
   height: 50vh;
