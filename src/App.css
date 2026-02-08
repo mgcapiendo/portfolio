@@ -2,6 +2,7 @@
 
 #root {
   text-align: center;
+  overflow: hidden;
 }
 
 * {
@@ -84,13 +85,40 @@
 
 /* ABOUT */
 .about {
-  height: 50vh;
+  height: 100vh;
   width: 100%;
-  background-color: rgba(21, 44, 18, 1);
-
   display: flex;
   flex-direction: column;
+  background: linear-gradient(
+    180deg,
+    #196a8f 0%,
+    #19678b 40%,
+    #125270 70%,
+    #0d445e 100%
+  );
+  font-family: 'Outfit', system-ui, sans-serif;
 }
+
+.about1 {
+  z-index: 100;
+}
+
+.about1,
+.about2 {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+.about-container {
+  padding-top: 30rem;
+  padding-left: 25rem;
+  padding-right: 25rem;
+  align-items: center;
+  text-align: center;
+}
+
 
 /* FOSSIL */
 .fossil {
@@ -102,7 +130,7 @@
 
   justify-content: center;
 
-  background-color: gray;
+  background-color: rgba(21, 44, 18, 1);
 }
 
 /* EXPERIENCE */
