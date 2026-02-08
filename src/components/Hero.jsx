@@ -1,16 +1,16 @@
-// import skeleton from "../assets/skeleton.png";
-// import volcano from "../assets/volcano.png";
-// import smoke1 from "../assets/smoke1.png";
-
+import mountain from "../assets/mountain.svg";
+import mountain2 from "../assets/mountain2.svg";
 
 const Header = () => {
     return (
         <div className="header">
             <div className="header-text">
-                <h1>Manuel Capiendo</h1>
+                <h1>Chok</h1>
                 
             </div>
             
+            <img src={mountain} className="mountain" />
+            <img src={mountain2} className="mountain2" />
         </div>
     )
 }
