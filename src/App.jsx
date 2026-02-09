@@ -3,7 +3,6 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Fossil from './components/Fossil';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
@@ -23,14 +22,10 @@ useEffect(() => {
     const ab1 = document.querySelector('.about1');
     const ab2 = document.querySelector('.about2');
 
-    if (mt1) mt1.style.transform = `translateX(${p * 80}vw)`;
-    if (mt2) mt2.style.transform = `translateX(-${p * 80}vw)`;
-    if (ab1) ab1.style.transform = `translateX(-${p * 80}vw)`;
-    if (ab2) ab2.style.transform = `translateX(${p * 80}vw)`;
-
-    // const about = document.querySelector('.about');
-
-    // if (about) about.style.transform = `translateY(${p * 80}vw)`;
+    if (mt1) mt1.style.transform = `translateX(${p * 56}vw)`;
+    if (mt2) mt2.style.transform = `translateX(-${p * 56}vw)`;
+    if (ab1) ab1.style.transform = `translateX(-${p * 56}vw)`;
+    if (ab2) ab2.style.transform = `translateX(${p * 56}vw)`;
   }
 
   window.addEventListener('scroll', handleScroll);
@@ -42,10 +37,9 @@ useEffect(() => {
       <Navbar />
       <Hero />
       <About />
-      {/* <Fossil />
       <Experience />
       <Projects />
-      <Contact /> */}
+      <Contact />
     </div>
   )
 }

@@ -18,6 +18,8 @@ const About = () => {
                 while exploring opportunities to learn, grow, and make the most impact.
                 </h2>
             </div>
+
+            
         </div>
     )
 }
