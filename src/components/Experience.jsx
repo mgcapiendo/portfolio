@@ -4,15 +4,11 @@ const Experience = () => {
             <div className="experience-container">
                 <h1>Experience</h1>
 
-                <div className="experience-card-holder">
+                <h2>Internships</h2>
+                <div className="experience-card-holder-internship">
                     <div className="experience-card">
                         <h2>Universal Orlando Resort</h2>
                         <h3>Software Quality Engineering Intern</h3>
-                        <p>Lorem Ipsum Something Something</p>
-                    </div>
-                    <div className="experience-card">
-                        <h2>Amazon Robotics</h2>
-                        <h3>Amazon Guides Mentee</h3>
                         <p>Lorem Ipsum Something Something</p>
                     </div>
                     <div className="experience-card">
@@ -26,13 +22,26 @@ const Experience = () => {
                         <p>Lorem Ipsum Something Something</p>
                     </div>
                     <div className="experience-card">
-                        <h2>South Florida Tech Hub</h2>
-                        <h3>Instructional Coder</h3>
-                        <p>Lorem Ipsum Something Something</p>
-                    </div>
-                    <div className="experience-card">
                         <h2>Sparton Corporation</h2>
                         <h3>Acoustic Engineering Intern</h3>
+                        <p>Lorem Ipsum Something Something</p>
+                    </div>
+                </div>
+
+                <h2>Mentorships</h2>
+                <div className="experience-card-holder-mentorship">
+                    <div className="experience-card">
+                        <h2>Amazon Robotics</h2>
+                        <h3>Amazon Guides Mentee</h3>
+                        <p>Lorem Ipsum Something Something</p>
+                    </div>
+                </div>
+
+                <h2>Leadership</h2>
+                <div className="experience-card-holder-leadership">
+                    <div className="experience-card">
+                        <h2>South Florida Tech Hub</h2>
+                        <h3>Instructional Coder</h3>
                         <p>Lorem Ipsum Something Something</p>
                     </div>
                     <div className="experience-card">
@@ -41,6 +50,9 @@ const Experience = () => {
                         <p>Lorem Ipsum Something Something</p>
                     </div>
                 </div>
+
+
+
 
 
             </div>

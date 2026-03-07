@@ -50,6 +50,11 @@
   );
 }
 
+.header h4 {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-style: italic;
+}
+
 .header-text {
   color: rgb(255, 255, 255);
   padding-top: 9rem;
@@ -99,7 +104,7 @@
   padding-bottom: 30rem;
   background: linear-gradient(
     180deg,
-    #196a8f 0%,
+    #40abdd 0%,
     #19678b 40%,
     #125270 70%,
     #0d445e 100%
@@ -121,8 +126,8 @@
 
 .about-container {
   padding-top: 30rem;
-  padding-left: 25rem;
-  padding-right: 25rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
   align-items: center;
   text-align: center;
 }
@@ -147,41 +152,126 @@
   );
 
   font-family: 'Outfit', system-ui, sans-serif;
+
+  padding-bottom: 5rem;
+
 }
 
-.experience-card-holder {
+.experience-card-holder-internship {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(1);
   gap: 2rem;
-  justify-items: center;
-  padding-left: 25rem;
-  padding-right: 25rem;
+  justify-content: center;
+}
+
+.experience-card-holder-mentorship {
+  display: grid;
+  grid-template-columns: repeat(1);
+  gap: 2rem;
+  justify-content: center;
+}
+
+.experience-card-holder-leadership {
+  display: grid;
+  grid-template-columns: repeat(1);
+  gap: 2rem;
+  justify-content: center;
 }
 
 .experience-card {
   background-color: #909699;
-  height: 100%;
-  width: auto;
+  height: 30vh;
+  width: 45vw;
   padding: 1rem;
   border-radius: 1rem;
 }
 
+/* @media (max-width: 90rem) {
+  .experience-card-holder-internship {
+    grid-template-columns: repeat(2, 20rem);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 20rem) {
+  .experience-card-holder-mentorship {
+    grid-template-columns: 20rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 50rem) {
+  .experience-card-holder-leadership {
+    grid-template-columns: 20rem;
+    justify-content: center;
+  }
+} */
+
 /* PROJECTS */
 .projects {
-  height: 50vh;
+  height: 100%;
   width: auto;
 
   display: flex;
   flex-direction: column;
 
   justify-content: center;
+  
 
-  background-color: blue;
+  background: linear-gradient(
+    180deg,
+    #04212e 0%,
+    #02141d 40%,
+    #01111a 70%,
+    #01111a 100%
+  );
+
+  font-family: 'Outfit', system-ui, sans-serif;
+
+  padding-bottom: 5rem;
 }
+
+.projects-cards-holder-personal {
+  display: grid;
+  grid-template-columns: repeat(2, 25rem);
+  gap: 2rem;
+  justify-content: center;
+}
+
+.projects-cards-holder-hackathons {
+  display: grid;
+  grid-template-columns: repeat(2, 25rem);
+  gap: 2rem;
+  justify-content: center;
+}
+
+.projects-card {
+  background-color: #909699;
+  height: 25rem;
+  width: 25rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/* @media (max-width: 70rem) {
+  .projects-cards-holder-personal {
+    grid-template-columns: 20rem;
+    justify-content: center;
+  }
+} */
+
+@media (max-width: 50rem) {
+  .projects-cards-holder-hackathons {
+    grid-template-columns: 20rem;
+    justify-content: center;
+  }
+}
+
+
 
 /* CONTACT */
 .contact {
-  height: 50vh;
+  height: 100%;
   width: auto;
 
   display: flex;
