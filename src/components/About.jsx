@@ -13,13 +13,11 @@ const About = () => {
                 <h2>Hey! I'm Chok, an aspiring software engineer, and I want to build technology that inspires and creates wonder. 
                 My journey began in middle school and high school with an engineering program, then continued through college ROTC, and now
                 where I am pursuing my degree in computer science and minor in artificial intelligence. 
-                {/* Along the way, my interests in process improvement and enterprise design have taught me to adapt, learn quickly, 
+                Along the way, my interests in process improvement and enterprise design have taught me to adapt, learn quickly, 
                 and collaborate with great people. I'm determined to contribute to projects that push technology forward 
-                while exploring opportunities to learn, grow, and make the most impact. */}
+                while exploring opportunities to learn, grow, and make the most impact.
                 </h2>
             </div>
-
-            
         </div>
     )
 }
