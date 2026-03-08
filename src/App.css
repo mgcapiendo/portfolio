@@ -9,20 +9,15 @@
 
 .App {
   overflow-x: hidden;
-  width: 100vw;
-  min-height: 100vh;
+  position: relative;
 }
 
 * {
   box-sizing: border-box;
 }
 
-html {
-  overflow-x: hidden;
-}
 
 body {
-  overflow-x: hidden;
   max-width: 100vw;
 }
 
