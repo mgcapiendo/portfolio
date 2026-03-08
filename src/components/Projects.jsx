@@ -33,7 +33,7 @@ const Projects = () => {
                 <h2>Hackathons</h2>
                 <div className="projects-cards-holder-hackathons">
                     <div className="projects-card">
-                        <h2>NEXTSteps: Career Navigation</h2>
+                        <h2>NEXTSteps</h2>
                         <h3>React, Python, Data Visualization</h3>
                         <p>Led a team of interns during the NEXT100 Hackathon to build NEXTSteps, an internal career support tool that helps employees explore potential career paths by leveraging the organizational chart to identify colleagues with similar skills, backgrounds, and role transitions as a guide for their next steps, ultimately being voted Fan Favorite with a similar solution already greenlit for development by the company.</p>
                     </div>
