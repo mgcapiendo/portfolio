@@ -5,6 +5,7 @@
 #root {
   text-align: center;
   overflow: hidden;
+  background-color: #1d1a11;
 }
 
 * {
@@ -14,15 +15,13 @@
 
 html, body {
   overflow-x: hidden;
-}
-
-html {
-  background-color: #3176c4;
+  overscroll-behavior: none;
 }
 
 body {
-  background-color: #1d1a11;
+  background-color: #3176c4;
 }
+
 
 /* *, *:hover {
   cursor: url("/cursor.png"), auto;
