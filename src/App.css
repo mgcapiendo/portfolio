@@ -4,7 +4,7 @@
 
 #root {
   text-align: center;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: #1d1a11;
 }
 
@@ -19,11 +19,6 @@ html, body {
 
 html {
   background-color: #3176c4;
-  overflow-x: hidden;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 /* *, *:hover {
