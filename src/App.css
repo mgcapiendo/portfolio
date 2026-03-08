@@ -9,9 +9,13 @@
   box-sizing: border-box;
 }
 
-*, *:hover {
-  cursor: url("/cursor.png"), auto;
+html, body {
+  overflow-x: hidden;
 }
+
+/* *, *:hover {
+  cursor: url("/cursor.png"), auto;
+} */
 
 /* NAVBAR */
 .navbar {
@@ -20,6 +24,9 @@
   height: auto;
   display: flex;
   font-family: 'Outfit', system-ui, sans-serif;
+  padding-top: 1rem;
+  position: relative;
+  z-index: 10;
 }
 
 .navbar-links {
@@ -28,19 +35,33 @@
   gap: 1vw;
   align-items: center;
   padding-right: 5rem;
+  padding-top: 2rem;
+  font-weight: bold;
+  font-size: large;
+  gap: 2rem;
 }
+
+.navbar-links span {
+  cursor: pointer;
+}
+
+@media (max-width: 30rem) {
+  .navbar-links {
+    margin-left: 0;
+    width: 100%;
+    justify-content: center;
+    padding-right: 0;
+    font-size: 1rem;
+    gap: 1rem;
+  }
+}
+
+
 
 /* HERO */
 .header {
   height: 100vh;
   position: relative;
-  /* background: linear-gradient(
-    180deg,
-    #0c1a15 0%,
-    #14291f 40%,
-    #1e3d2b 70%,
-    #2e6b45 100%
-  ); */
   background: linear-gradient(
     180deg,
     #3176c4 0%,
@@ -95,6 +116,12 @@
   transition: none;
 }
 
+@media (max-width: 30rem) {
+  .header-text {
+    font-size: 1.5rem;
+  }
+}
+
 /* ABOUT */
 .about {
   height: 100%;
@@ -113,7 +140,7 @@
 }
 
 .about1 {
-  z-index: 100;
+  z-index: 2;
 }
 
 .about1,
@@ -126,10 +153,96 @@
 
 .about-container {
   padding-top: 30rem;
-  padding-left: 15rem;
-  padding-right: 15rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
   align-items: center;
   text-align: center;
+}
+
+.about-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 25rem);
+  gap: 2rem;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.about-card {
+  background-color: #909699;
+  height: 100%;
+  width: auto;
+  border-radius: 1rem;
+}
+
+.about-bio {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 90rem) {
+  .about-cards-container {
+    grid-template-columns: repeat(2, 25rem);
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 65rem) {
+  .about-cards-container {
+    grid-template-columns: 25rem;
+
+  }
+}
+
+@media (max-width: 90rem) {
+  .about-bio {
+    font-size: 1.25rem;
+  }
+
+  .about-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 80rem) {
+  .about-bio {
+    font-size: 1.12em;
+  }
+
+  .about-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 70rem) {
+  .about-bio {
+    font-size: 1rem;
+  }
+
+  .about-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 60rem) {
+  .about-bio {
+    font-size: 0.9rem;
+  }
+  
+  .about-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .about-cards-container {
+    grid-template-columns: 1fr;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 
@@ -153,6 +266,7 @@
 
   font-family: 'Outfit', system-ui, sans-serif;
 
+  padding-top: 12rem;
   padding-bottom: 12rem;
 
 }
@@ -162,13 +276,15 @@
   grid-template-columns: repeat(2, 50rem);
   gap: 2rem;
   justify-content: center;
+  padding-bottom: 4rem;
 }
 
 .experience-card-holder-mentorship {
   display: grid;
-  grid-template-columns: repeat(1);
+  grid-template-columns: 50rem;
   gap: 2rem;
   justify-content: center;
+  padding-bottom: 4rem;
 }
 
 .experience-card-holder-leadership {
@@ -181,31 +297,45 @@
 .experience-card {
   background-color: #909699;
   height: 30rem;
-  width: 50em;
+  width: 100%;
   padding: 1rem;
   border-radius: 1rem;
 }
 
-/* @media (max-width: 90rem) {
-  .experience-card-holder-internship {
-    grid-template-columns: repeat(2, 20rem);
-    justify-content: center;
-  }
+.experience-card h2 {
+  font-size: xx-large;
 }
 
-@media (max-width: 20rem) {
+.experience-card h3 {
+  font-size: larger;
+}
+
+.experience-card p {
+  font-size: larger;
+}
+
+
+@media (max-width: 110rem) {
+  .experience-card-holder-internship,
+  .experience-card-holder-leadership,
   .experience-card-holder-mentorship {
-    grid-template-columns: 20rem;
-    justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
+
+  
 }
 
-@media (max-width: 50rem) {
-  .experience-card-holder-leadership {
-    grid-template-columns: 20rem;
-    justify-content: center;
+@media (max-width: 65rem) {
+  .experience-card-holder-internship,
+  .experience-card-holder-leadership,
+  .experience-card-holder-mentorship {
+    grid-template-columns: 1fr;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
-} */
+}
 
 /* PROJECTS */
 .projects {
@@ -236,11 +366,12 @@
   grid-template-columns: repeat(3, 25rem);
   gap: 2rem;
   justify-content: center;
+  padding-bottom: 4rem;
 }
 
 .projects-cards-holder-hackathons {
   display: grid;
-  grid-template-columns: repeat(2, 25rem);
+  grid-template-columns: repeat(3, 25rem);
   gap: 2rem;
   justify-content: center;
 }
@@ -253,10 +384,34 @@
   border-radius: 1rem;
 }
 
-@media (max-width: 50rem) {
+@media (max-width: 90rem) {
+  .projects-cards-holder-personal,
   .projects-cards-holder-hackathons {
-    grid-template-columns: 20rem;
-    justify-content: center;
+    grid-template-columns: repeat(2, 25rem);
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 65rem) {
+  .projects-cards-holder-personal,
+  .projects-cards-holder-hackathons {
+    grid-template-columns: 1fr;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .projects-cards-holder-hackathons,
+  .projects-cards-holder-personal {
+    grid-template-columns: 1fr;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .projects-card {
+    width: 100%;
   }
 }
 
@@ -286,9 +441,64 @@
   padding-bottom: 5rem;
 }
 
+.contact a {
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-weight: bold;
+  font-size: large;
+  color: rgba(255, 255, 255, 0.87);
+}
+
 .socials {
   display: flex;
   grid-template-columns: 2;
   gap: 2rem;
   justify-content: center;
+}
+
+.bubble-email {
+  padding-bottom: 0.25rem;
+}
+
+.resume {
+  background-color: #909699;
+
+  width: 20%;
+  min-width: 10rem;
+  max-width: 20rem;
+  height: 3.2rem;
+
+  border-radius: 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto;
+
+  transition: background-color 0.2s ease;
+}
+
+.resume:hover {
+  background-color: #499ec9;
+  cursor: pointer;
+}
+
+@media (max-width: 30rem) {
+  .contact-card {
+    font-size: small;
+  }
+
+  .socials {
+    flex-wrap: wrap;
+  }
+
+  .bubble-email h3 {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 60rem) {
+  .resume h3 {
+    font-size: 1rem;
+  }
 }

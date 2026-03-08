@@ -8,8 +8,8 @@ const Header = () => {
                 <h1>Chok</h1>
             </div>
 
-            <h2 className="subtext">Computer Science & Artificial Intelligence</h2>
-            <h4 className="subtext">Florida Atlantic University Class of Fall 2026</h4>
+            <h2></h2>
+    
             
             <img src={mountain} className="mountain" />
             <img src={mountain2} className="mountain2" />
