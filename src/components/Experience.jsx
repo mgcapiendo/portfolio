@@ -6,7 +6,7 @@ const Experience = () => {
 
                 <h2>Internships</h2>
                 <div className="experience-card-holder-internship">
-                    <div className="experience-card">
+                    <div className="experience-card coral-2">
                         <h2>Universal Orlando Resort</h2>
                         <h3>Software Quality Engineering Intern</h3>
                         <p>
@@ -18,7 +18,7 @@ const Experience = () => {
                     </div>
 
 
-                    <div className="experience-card">
+                    <div className="experience-card coral-2">
                         <h2>NextEra Energy</h2>
                         <h3>IT Programming Analyst Intern</h3>
                         <p>
@@ -28,7 +28,7 @@ const Experience = () => {
                             Led a full architectural refactor of Angular service-layer state management, routing patterns, and UI/UX to eliminate technical debt, presenting to director-level leadership and recognized as the foundation for NextEra's nuclear IT development and API governance strategy.
                         </p>
                     </div>
-                    <div className="experience-card">
+                    <div className="experience-card coral-2">
                         <h2>Florida Power & Light</h2>
                         <h3>Emerging Technology Intern</h3>
                         <p>
@@ -38,7 +38,7 @@ const Experience = () => {
                             Developed autonomous inspection pathways and timed patrol routes for a robotic quadruped monitoring St. Lucie Nuclear Power Plant, then presented the team's emerging technology roadmap to regional directors of the Nuclear Regulatory Commission.
                         </p>
                     </div>
-                    <div className="experience-card">
+                    <div className="experience-card coral-2">
                         <h2>Sparton Corporation</h2>
                         <h3>Acoustic Engineering Intern</h3>
                         <p>
@@ -52,7 +52,7 @@ const Experience = () => {
 
                 <h2>Mentorships</h2>
                 <div className="experience-card-holder-mentorship">
-                    <div className="experience-card">
+                    <div className="experience-card coral-2">
                         <h2>Amazon Robotics</h2>
                         <h3>Amazon Guides Mentee</h3>
                         <p>
@@ -66,7 +66,7 @@ const Experience = () => {
 
                 <h2>Leadership</h2>
                 <div className="experience-card-holder-leadership">
-                    <div className="experience-card">
+                    <div className="experience-card coral-2">
                         <h2>South Florida Tech Hub</h2>
                         <h3>Instructional Coder</h3>
                         <p>
@@ -76,7 +76,7 @@ const Experience = () => {
                             Designed and led hands-on curriculum that introduced students to core programming concepts, fostering curiosity and confidence in young learners who had little to no prior exposure to software development.
                         </p>
                     </div>
-                    <div className="experience-card">
+                    <div className="experience-card coral-2">
                         <h2>Naval Reserve Officer Training Corps</h2>
                         <h3>Midshipman</h3>
                         <p>

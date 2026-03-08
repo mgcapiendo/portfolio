@@ -57,8 +57,6 @@ body {
   }
 }
 
-
-
 /* HERO */
 .header {
   height: 100vh;
@@ -183,6 +181,8 @@ body {
 .about-bio {
   font-size: 1.5rem;
 }
+
+.coral-1 { background-color: #6ba8be; }
 
 @media (max-width: 90rem) {
   .about-cards-container {
@@ -320,6 +320,8 @@ body {
   font-size: larger;
 }
 
+.coral-2 { background-color: #529eba; }
+
 
 @media (max-width: 110rem) {
   .experience-card-holder-internship,
@@ -402,6 +404,8 @@ body {
   padding: 2rem;
   border-radius: 1rem;
 }
+
+.coral-3 { background-color: #27718c; }
 
 @media (max-width: 90rem) {
   .projects-cards-holder-personal,
@@ -486,7 +490,7 @@ body {
 }
 
 .resume {
-  background-color: #909699;
+  background-color: #499ec9;
 
   width: 20%;
   min-width: 10rem;
@@ -505,7 +509,7 @@ body {
 }
 
 .resume:hover {
-  background-color: #499ec9;
+  background-color: #2f769a;
   cursor: pointer;
 }
 

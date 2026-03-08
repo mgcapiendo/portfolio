@@ -18,19 +18,19 @@ const About = () => {
                 </h2>
 
                 <div className="about-cards-container">
-                    <div className="about-card">
+                    <div className="about-card coral-1">
                         <h2>Education</h2>
                         <h3>Florida Atlantic University</h3>
                         <p>B.S. In Computer Science, AI Minor</p>
 
                     </div>
-                    <div className="about-card">
+                    <div className="about-card coral-1">
                         <h2>Certifications</h2>
                         <p>AWS Certified Cloud Practioner</p>
                         <p>Lean Six Sigma Yellow Belt</p>
                         
                     </div>
-                    <div className="about-card">
+                    <div className="about-card coral-1">
                         <h2>Tech Stack</h2>
                         <p>Full-Stack Development</p>
                         <p>AI & Machine Learning</p>
