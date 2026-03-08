@@ -11,6 +11,12 @@ import { useEffect } from 'react';
 
 
 const App = () => {
+
+useEffect(() => {
+  const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if (isIOS) document.body.classList.add('ios-status-bar');
+}, []);
+
 useEffect(() => {
   function handleScroll() {
     const scrollY = window.scrollY;
