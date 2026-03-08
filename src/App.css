@@ -9,11 +9,11 @@
 
 * {
   box-sizing: border-box;
-
 }
 
 html, body {
   overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 /* *, *:hover {
@@ -65,6 +65,7 @@ html, body {
 .header {
   height: 100vh;
   position: relative;
+  overflow: hidden;
   background: linear-gradient(
     180deg,
     #3176c4 0%,
