@@ -52,7 +52,7 @@ const Experience = () => {
 
                 <h2>Mentorships</h2>
                 <div className="experience-card-holder-mentorship">
-                    <div className="experience-card coral-2">
+                    <div className="experience-card coral-2a">
                         <h2>Amazon Robotics</h2>
                         <h3>Amazon Guides Mentee</h3>
                         <p>
@@ -66,7 +66,7 @@ const Experience = () => {
 
                 <h2>Leadership</h2>
                 <div className="experience-card-holder-leadership">
-                    <div className="experience-card coral-2">
+                    <div className="experience-card coral-2b">
                         <h2>South Florida Tech Hub</h2>
                         <h3>Instructional Coder</h3>
                         <p>
@@ -76,7 +76,7 @@ const Experience = () => {
                             Designed and led hands-on curriculum that introduced students to core programming concepts, fostering curiosity and confidence in young learners who had little to no prior exposure to software development.
                         </p>
                     </div>
-                    <div className="experience-card coral-2">
+                    <div className="experience-card coral-2b">
                         <h2>Naval Reserve Officer Training Corps</h2>
                         <h3>Midshipman</h3>
                         <p>

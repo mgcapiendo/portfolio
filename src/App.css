@@ -321,6 +321,9 @@ body {
 }
 
 .coral-2 { background-color: #529eba; }
+.coral-2a { background-color: #39829c; }
+.coral-2b { background-color: #256379; }
+
 
 
 @media (max-width: 110rem) {
@@ -405,7 +408,8 @@ body {
   border-radius: 1rem;
 }
 
-.coral-3 { background-color: #27718c; }
+.coral-3 { background-color: #195368; }
+.coral-3a { background-color: #0f3f51; }
 
 @media (max-width: 90rem) {
   .projects-cards-holder-personal,

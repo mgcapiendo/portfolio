@@ -32,17 +32,17 @@ const Projects = () => {
                 
                 <h2>Hackathons</h2>
                 <div className="projects-cards-holder-hackathons">
-                    <div className="projects-card coral-3">
+                    <div className="projects-card coral-3a">
                         <h2>NEXTSteps 🏆</h2>
                         <h3>React, Python, Data Visualization</h3>
                         <p>Led a team of interns during the NEXT100 Hackathon to build NEXTSteps, an internal career support tool that helps employees explore potential career paths by leveraging the organizational chart to identify colleagues with similar skills, backgrounds, and role transitions as a guide for their next steps, ultimately being voted Fan Favorite with a similar solution already greenlit for development by the company.</p>
                     </div>
-                    <div className="projects-card coral-3">
+                    <div className="projects-card coral-3a">
                         <h2>Mycobime Research Simulator</h2>
                         <h3>Python, Data Visualization</h3>
                         <p>Collaborated in an interdisciplinary team to develop a Python-based visualization and simulation tool for researching the fungal component of the human microbiome and its correlations with human longevity, bridging the gap between complex biological research data and an accessible, interactive software experience.</p>
                     </div>
-                    <div className="projects-card coral-3">
+                    <div className="projects-card coral-3a">
                         <h2>AI-Powered Waste Routing 🏆</h2>
                         <h3>Python, Swarm Intelligence </h3>
                         <p>
