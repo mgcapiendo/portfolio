@@ -12,10 +12,9 @@
   box-sizing: border-box;
 }
 
-html {
-  background-color: #3176c4;
+html, body {
+  overflow-x: hidden;
 }
-
 /* *, *:hover {
   cursor: url("/cursor.png"), auto;
 } */
@@ -24,7 +23,7 @@ html {
 .navbar {
   background: #3176c4 0%;
   width: 100%;
-  height: auto;
+  height: 110%;
   display: flex;
   font-family: 'Outfit', system-ui, sans-serif;
   padding-top: env(safe-area-inset-top);
