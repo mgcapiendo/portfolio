@@ -4,8 +4,7 @@
 
 #root {
   text-align: center;
-  overflow: hidden;
-  background-color: #1d1a11;
+  overflow-x: hidden;
 }
 
 * {
@@ -15,13 +14,7 @@
 
 html, body {
   overflow-x: hidden;
-  overscroll-behavior: none;
 }
-
-body {
-  background-color: #3176c4;
-}
-
 
 /* *, *:hover {
   cursor: url("/cursor.png"), auto;
@@ -30,7 +23,7 @@ body {
 /* NAVBAR */
 .navbar {
   background: #3176c4 0%;
-  width: 100%;
+  width: 110%;
   height: auto;
   display: flex;
   font-family: 'Outfit', system-ui, sans-serif;
