@@ -490,6 +490,8 @@ body {
 }
 
 .bubble-email {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
   padding-bottom: 0.25rem;
 }
 
@@ -524,10 +526,6 @@ body {
 
   .socials {
     flex-wrap: wrap;
-  }
-
-  .bubble-email h3 {
-    font-size: 0.75rem;
   }
 }
 

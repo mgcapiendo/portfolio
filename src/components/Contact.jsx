@@ -18,7 +18,7 @@ const Contact = () => {
                     </div>
 
                     <div className="bubble-email">
-                        <h3>manuelgcapiendo@gmail.com</h3>
+                        <a href="https://mail.google.com/mail/?view=cm&to=manuelgcapiendo@gmail.com&su=Hello&body=Hi%20Manuel!" target="_blank" rel="noreferrer">manuelgcapiendo@gmail.com</a>
                     </div>
 
                     <div>
