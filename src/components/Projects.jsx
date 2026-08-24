@@ -21,7 +21,7 @@ const Projects = () => {
                         </ul>
                     </div>
                     <div className="projects-card coral-3a">
-                        <h2>Mycobime Research Simulator</h2>
+                        <h2>Mycobiome Research Simulator</h2>
                         <h3>Python, Data Visualization</h3>
                         <p>Formed and led an interdisciplinary team (psychology, public health, and computer science) to research the fungal component of the human microbiome and its correlations with longevity.</p>
                         <ul>

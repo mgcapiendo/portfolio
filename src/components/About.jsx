@@ -21,7 +21,7 @@ const About = () => {
                     </div>
                     <div className="about-card coral-1">
                         <h2>Certifications</h2>
-                        <p>AWS Certified Cloud Practioner</p>
+                        <p>AWS Certified Cloud Practitioner</p>
                         <p>Lean Six Sigma Yellow Belt</p>
                         
                     </div>

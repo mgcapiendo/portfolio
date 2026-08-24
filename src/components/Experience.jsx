@@ -49,7 +49,7 @@ const Experience = () => {
                                 Developed and executed test plans for web and eCommerce platforms, including cross-browser and cross-device validation using LambdaTest.
                             </li>
                             <li>
-                                Gained exposure to physical testing of in-park technology and hardware through Universal’s QA Lab, alongside software QE work.
+                                Gained exposure to physical testing of in-park technology and hardware through Universal's QA Lab, alongside software QE work.
                             </li>
                         </ul>
                     </div>
@@ -102,7 +102,7 @@ const Experience = () => {
                                 Led the project across problem identification, requirements gathering, implementation, and deployment, coordinating with multiple departments and customizing existing impedance analyzer driver code in C, with guidance from a senior engineer, to eliminate the need for an advanced operator to run manual tests.
                             </li>
                             <li>
-                                Integrated the automated test station with a SQL Server database to store test results, reducing testing cycle time for piezoelectric ceramic components from 160 seconds to 40 seconds and restoring full-capacity for the line.
+                                Integrated the automated test station with a SQL Server database to store test results, reducing testing cycle time for piezoelectric ceramic components from 160 seconds to 40 seconds and restoring full capacity for the line.
                             </li>
                             <li>
                                 Supported sonobuoy production through test data analysis, calculations, and documentation used by engineers for quality control.

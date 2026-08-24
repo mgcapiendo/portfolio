@@ -9,7 +9,7 @@ const Contact = () => {
 
                     <div className="socials">
                         <div className="bubble">
-                            <a href="https://linkedin.com/in/capiendo" target="_blank" rel="noreferrer">Linkedin</a>
+                            <a href="https://linkedin.com/in/capiendo" target="_blank" rel="noreferrer">LinkedIn</a>
                         </div>
                         
                         <div className="bubble">
