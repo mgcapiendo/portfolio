@@ -138,9 +138,11 @@ const Experience = () => {
                         <p>
                             Volunteered monthly to teach K-12 students fundamental programming concepts using Code.org and freeCodeCamp.
                         </p>
-                        <p>
-                            Guided students through problem-solving when they got stuck, tailoring resources and support to each student's skill level.
-                        </p>
+                        <ul>
+                            <li>
+                                Guided students through problem-solving when they got stuck, tailoring resources and support to each student's skill level.
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
