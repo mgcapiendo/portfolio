@@ -3,51 +3,50 @@ const Projects = () => {
         <div className="projects" id="projects">
             <div className ="projects-container">
 
-                <h1>Projects</h1>
-
-                <h2>Personal</h2>
-                <div className="projects-cards-holder-personal">
-                    <div className="projects-card coral-3">
-                        <h2>Theme Park Ticketing System</h2>
-                        <h3>React, Flask, PostgreSQL, Selenium</h3>
-                        <p>
-                            Built a full-stack ticketing platform for simulated theme park "Dino World" with a React frontend, Flask backend, and PostgreSQL database, handling reservations, user authentication, and real-time availability across all park offerings and integrating Selenium automated testing to validate reliability across all end-to-end user flows.
-                        </p>
-                    </div>
-                    <div className="projects-card coral-3">
-                        <h2>Disney Emissions Dashboard</h2>
-                        <h3>JavaScript, Data Visualization</h3>
-                        <p>
-                            Built an interactive data visualization dashboard tracking Disney's Scope 1-3 carbon emissions and year-over-year progress toward their 2030 net zero targets, incorporating an integrated petition registration feature to drive stakeholder engagement and connect data storytelling directly to real-world sustainability advocacy.
-                        </p>
-                    </div>
-                    <div className="projects-card coral-3">
-                        <h2>Voice-Controlled Robot</h2>
-                        <h3>Python, Arduino, Gemini LLM</h3>
-                        <p>
-                            Integrated Google's Gemini LLM with Arduino hardware to build a voice-interactive robot capable of real-time speech transcription and natural language command processing, enabling fluid conversational control of a physical robotic system through end-to-end integration of AI inference, audio processing, and microcontroller actuation.
-                        </p>
-                    </div>
-                </div>
+                <h1 className="reveal">Projects</h1>
                 
-                <h2>Hackathons</h2>
-                <div className="projects-cards-holder-hackathons">
+                <h2 className="reveal">Hackathons</h2>
+                <div className="projects-cards-holder-hackathons reveal-group">
                     <div className="projects-card coral-3a">
                         <h2>NEXTSteps 🏆</h2>
                         <h3>React, Python, Data Visualization</h3>
-                        <p>Led a team of interns during the NEXT100 Hackathon to build NEXTSteps, an internal career support tool that helps employees explore potential career paths by leveraging the organizational chart to identify colleagues with similar skills, backgrounds, and role transitions as a guide for their next steps, ultimately being voted Fan Favorite with a similar solution already greenlit for development by the company.</p>
+                        <p>Led a 6-person team of IT interns to design NEXTSteps, an internal career navigation tool that uses the company's organizational chart to identify employees with similar skills and backgrounds, suggesting informed career path options.</p>
+                        <ul>
+                            <li>
+                                Directed the product vision and overall design of the app, then matched each teammate to the role best suited to their strengths, assigning technical, research, and presentation work.
+                            </li>
+                            <li>
+                                Kept the team on track throughout the week while building the pitch presentation and script, including a Star Wars-themed narrative to make the concept memorable and engaging.
+                            </li>
+                        </ul>
                     </div>
                     <div className="projects-card coral-3a">
                         <h2>Mycobime Research Simulator</h2>
                         <h3>Python, Data Visualization</h3>
-                        <p>Collaborated in an interdisciplinary team to develop a Python-based visualization and simulation tool for researching the fungal component of the human microbiome and its correlations with human longevity, bridging the gap between complex biological research data and an accessible, interactive software experience.</p>
+                        <p>Formed and led an interdisciplinary team (psychology, public health, and computer science) to research the fungal component of the human microbiome and its correlations with longevity.</p>
+                        <ul>
+                            <li>
+                                Recruited and led a 4-person team across three different fields of study, coordinating the technical build alongside teammates' research contributions.
+                            </li>
+                            <li>
+                                Built a Python-based visualization and simulation tool using Tkinter, with a GUI depicting a simulated view of the fungal microbiome within the human body.
+                            </li>
+                        </ul>
                     </div>
                     <div className="projects-card coral-3a">
                         <h2>AI-Powered Waste Routing 🏆</h2>
                         <h3>Python, Swarm Intelligence </h3>
                         <p>
-                            Competed solo against multi-person teams to design and build an AI-driven Ant Colony Optimization system that reduced waste management routing inefficiencies by 10% using swarm intelligence modeling, placing 2nd overall and demonstrating the ability to independently scope, architect, and deliver a functional AI system under time pressure.
+                            Built and presented solo against team-based competitors, placing 2nd overall. Started this project shortly after finishing my first internship at Sparton, and was motivated to apply what I was learning in my second year of Computer Science.
                         </p>
+                        <ul>
+                            <li>
+                                Proposed the core idea of modeling garbage truck routing and waste-to-energy facilities after how ants forage for food by applying Ant Colony Optimization to real-world waste collection logistics.
+                            </li>
+                            <li>
+                                Built a Python-based visual demo showing how ACO-driven routing could improve fuel-to-waste pickup efficiency, aiming to maximize daily output for waste-to-energy production while reducing operational costs.
+                            </li>
+                        </ul>
                     </div>
                 </div>
 

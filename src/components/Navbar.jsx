@@ -6,6 +6,7 @@ const Navbar = () => {
 
     return (
         <div className="navbar">
+            <span className="navbar-brand" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Scroll to top" />
             <div className="navbar-links">
                 <span onClick={() => scrollToSection("about")}>About</span>
                 <span onClick={() => scrollToSection("experience")}>Experience</span>

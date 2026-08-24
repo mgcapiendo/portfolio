@@ -9,28 +9,25 @@ import Contact from './components/Contact';
 
 import { useEffect } from 'react';
 
-
 const App = () => {
-useEffect(() => {
-  function handleScroll() {
-    const scrollY = window.scrollY;
-    const vh = window.innerHeight;
-    const p = Math.min(scrollY / vh, 1);
+  useEffect(() => {
+    const targets = document.querySelectorAll('.reveal, .reveal-group');
 
-    const mt1 = document.querySelector('.mountain');
-    const mt2 = document.querySelector('.mountain2');
-    const ab1 = document.querySelector('.about1');
-    const ab2 = document.querySelector('.about2');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
 
-    if (mt1) mt1.style.transform = `translateX(${p * 56}vw)`;
-    if (mt2) mt2.style.transform = `translateX(-${p * 56}vw)`;
-    if (ab1) ab1.style.transform = `translateX(-${p * 56}vw)`;
-    if (ab2) ab2.style.transform = `translateX(${p * 56}vw)`;
-  }
-
-  window.addEventListener('scroll', handleScroll);
-  return () => window.removeEventListener('scroll', handleScroll);
-}, []);
+    targets.forEach((target) => observer.observe(target));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="App">

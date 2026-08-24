@@ -2,7 +2,7 @@ const Contact = () => {
     return (
         <div className="contact" id="contact">
 
-            <div className="contact-card">
+            <div className="contact-card reveal">
                 <h1>Contact</h1>
                 
                 <div className="contact-bubbles">

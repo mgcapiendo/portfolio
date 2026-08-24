@@ -1,23 +1,18 @@
-import about1 from "../assets/about1.svg";
-import about2 from "../assets/about2.svg";
-
 const About = () => {
     return (
         <div className="about" id="about">
-            <img src={about1} className="about1"/>
-            <img src={about2} className="about2"/>
-            
             <div className="about-container">
-                <h1>About</h1>
+                <h1 className="reveal">About</h1>
 
-                <h2 className="about-bio">Hey! I'm Chok. I'm a student at Florida Atlantic University studying Computer Science and Artificial Intelligence. 
-                    I'm interested in the design and development of Full-Stack applications and how AI can be integrated for new features.
-                    I also enjoy the hardware side such as applications for Robotics or Extended Reality.
-                    Currently, I intern at Universal Destinations & Experiences as a Software Quality Engineering Intern where I build
-                    and maintain the systems that ensure Universal's apps work across web, mobile, and point-of-sale platforms worldwide.
+                <h2 className="about-bio reveal">
+                    Currently, I study at Florida Atlantic University, where I will be graduating this December with my Bachelor of Science in Computer Science and Minor in Artificial Intelligence.
+
+                    What drew me to software engineering is how much range it has, there's almost no limit to what you can build or the impact it can have. There's something incredibly satisfying to me about being the person behind the scenes who keeps a system running so other people can have a great experience on the other end.
+
+
                 </h2>
 
-                <div className="about-cards-container">
+                <div className="about-cards-container reveal-group">
                     <div className="about-card coral-1">
                         <h2>Education</h2>
                         <h3>Florida Atlantic University</h3>
@@ -31,9 +26,10 @@ const About = () => {
                         
                     </div>
                     <div className="about-card coral-1">
-                        <h2>Tech Stack</h2>
-                        <p>Full-Stack Development</p>
-                        <p>AI & Machine Learning</p>
+                        <h2>Core Skills</h2>
+                        <p>Languages: Python, JavaScript, TypeScript, Java, SQL</p>
+                        <p>Frameworks: React.js, Angular, Flask, Node.js</p>
+                        <p>Data: PostgreSQL, MongoDB, OpenSearch</p>
                     </div>
                 </div>
             </div>
