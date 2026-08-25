@@ -5,10 +5,9 @@ const About = () => {
                 <h1 className="reveal">About</h1>
 
                 <h2 className="about-bio reveal">
-                    Currently, I study at Florida Atlantic University, where I will be graduating this December with my Bachelor of Science in Computer Science and Minor in Artificial Intelligence.
-
-                    What drew me to software engineering is how much range it has. There's almost no limit to what you can build or the impact it can have.
-
+                    Currently, I study at Florida Atlantic University, 
+                    where I will be graduating this December with my Bachelor of Science in Computer Science and Minor in Artificial Intelligence. 
+                    What drew me to software engineering is how there's almost no limit to what you can build or the impact it can have.
                 </h2>
 
                 <div className="about-cards-container reveal-group">
