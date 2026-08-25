@@ -7,8 +7,7 @@ const About = () => {
                 <h2 className="about-bio reveal">
                     Currently, I study at Florida Atlantic University, where I will be graduating this December with my Bachelor of Science in Computer Science and Minor in Artificial Intelligence.
 
-                    What drew me to software engineering is how much range it has, there's almost no limit to what you can build or the impact it can have. There's something incredibly satisfying to me about being the person behind the scenes who keeps a system running so other people can have a great experience on the other end.
-
+                    What drew me to software engineering is how much range it has. There's almost no limit to what you can build or the impact it can have.
 
                 </h2>
 
