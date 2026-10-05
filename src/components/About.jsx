@@ -15,6 +15,7 @@ const About = () => {
                         <h2>Education</h2>
                         <h3>Florida Atlantic University</h3>
                         <p>B.S. In Computer Science, AI Minor</p>
+                        <p>Expected December 2026</p>
 
                     </div>
                     <div className="about-card coral-1">
@@ -25,9 +26,11 @@ const About = () => {
                     </div>
                     <div className="about-card coral-1">
                         <h2>Core Skills</h2>
-                        <p>Languages: Python, JavaScript, TypeScript, Java, SQL</p>
-                        <p>Frameworks: React.js, Angular, Flask, Node.js</p>
-                        <p>Data: PostgreSQL, MongoDB, OpenSearch</p>
+                        <p>Languages: Python, TypeScript, JavaScript, Java, SQL</p>
+                        <p>Frameworks: React, Vue, Angular, Node.js/Express, Flask</p>
+                        <p>AI/ML: PyTorch, scikit-learn, pandas, NumPy, OpenAI API</p>
+                        <p>Data: PostgreSQL, OpenSearch, SQL Server, MongoDB</p>
+                        <p>Testing: Vitest, Playwright, Selenium, Appium</p>
                     </div>
                 </div>
             </div>
