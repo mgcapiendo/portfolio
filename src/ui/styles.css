@@ -1,20 +1,22 @@
-/* Portfolio styles. Palette follows the PRD: sandstone, soil, jungle
-   green accent, sunset-orange call to action. Pixel font for headings only. */
+/* Portfolio styles. One dark palette for every device: navy and near-black
+   with light-blue accents and a yellow call to action. It does not follow the
+   device light/dark setting, so no part of the site ever turns white.
+   Pixel font for headings only. */
 
 :root {
-  --bg: #f8f6f0;
-  --surface: #fffdf8;
-  --line: #d8dee8;
-  --ink: #0f1f3d;
-  --ink-2: #45556f;
-  --accent: #1f5fa8;
-  --accent-soft: #e3ecf8;
+  --bg: #07101f;
+  --surface: #0f1b33;
+  --line: #22345a;
+  --ink: #f3f1ea;
+  --ink-2: #b4c2da;
+  --accent: #8fb8ee;
+  --accent-soft: rgba(143, 184, 238, 0.14);
   --cta: #f5c242;
   --cta-hover: #f8cf63;
-  --cta-ink: #0f1f3d;
-  --cta-soft: rgba(245, 194, 66, 0.28);
-  --shadow: #0f1f3d;
-  --focus: #1f5fa8;
+  --cta-ink: #0b1730;
+  --cta-soft: rgba(245, 194, 66, 0.2);
+  --shadow: #000;
+  --focus: #8fb8ee;
 
   --hud-bg: #0f1f3d;
   --hud-ink: #f8f6f0;
@@ -22,38 +24,24 @@
   --hud-hover: rgba(185, 200, 224, 0.14);
 
   --navy: #0f1f3d;
-  --tint: #e8eff9;
+  --tint: #0b1629;
   --scene-far: #1c3566;
   --scene-near: #142a52; /* darker than the far range: front hills read as silhouettes, no pale strip at the break */
-  --card-border: #0f1f3d;
-  --card-shadow: #bccfeb;
+  --card-border: #2c4170;
+  --card-shadow: #000;
 
   --font-body: 'Outfit', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --font-pixel: 'Pixelify Sans', 'Outfit', system-ui, sans-serif;
   --radius: 6px;
   --max: 980px;
 
-  color-scheme: light;
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #07101f;
-    --surface: #0f1b33;
-    --line: #22345a;
-    --ink: #f3f1ea;
-    --ink-2: #b4c2da;
-    --accent: #8fb8ee;
-    --accent-soft: rgba(143, 184, 238, 0.14);
-    --cta-ink: #0b1730;
-    --cta-soft: rgba(245, 194, 66, 0.2);
-    --shadow: #000;
-    --focus: #8fb8ee;
-    --tint: #0b1629;
-    --card-border: #2c4170;
-    --card-shadow: #000;
-    color-scheme: dark;
-  }
+/* The root background shows when a phone overscrolls past the top or bottom
+   (and for a moment while the page loads); keep it dark too. */
+html {
+  background: var(--bg);
 }
 
 /* ---------- Base ---------- */
