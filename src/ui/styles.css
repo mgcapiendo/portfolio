@@ -787,6 +787,14 @@ main:focus {
   margin-top: 16px;
 }
 
+/* If the last row of the 3-column grid would hold two cards, let the last
+   one span the gap so the row stays full. */
+@media (min-width: 720px) {
+  .skills-grid .skill-card:last-child:nth-child(3n + 2) {
+    grid-column: span 2;
+  }
+}
+
 .skill-card h3 {
   font-family: var(--font-pixel);
   font-size: 1.1rem;

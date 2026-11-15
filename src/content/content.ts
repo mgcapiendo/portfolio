@@ -67,7 +67,7 @@ export const education = {
   zone: 'Visitor Center',
 };
 
-export const certifications = ['AWS Certified Cloud Practitioner', 'Lean Six Sigma Yellow Belt'];
+export const certifications = ['AWS Certified Cloud Practitioner', 'Six Sigma Yellow Belt'];
 
 export const roles: Role[] = [
   {
@@ -79,10 +79,10 @@ export const roles: Role[] = [
     summary:
       'Currently supporting solutions architects on AI initiatives and emerging technology across Park Operations, Digital & Technology, and Food & Beverage.',
     bullets: [
-      'Building an internal SWE-bench-style benchmark to evaluate AI coding agents on company codebases, informing adoption decisions for AI-assisted development across engineering teams.',
-      "Evaluating emerging technology, including computer vision, AI, and robotics, for use across Universal's parks and business units.",
+      'Building an AI agent benchmarking platform for LLM evaluation with trial orchestration, automated judging, and statistical comparisons across multiple harnesses and models.',
+      'Benchmarking computer vision pipelines for video anonymization on detection accuracy and tracking stability then designing higher-resolution, tracking, and multi-model approaches to improve them.',
     ],
-    tags: ['AI coding agents', 'Benchmarking', 'Computer vision', 'Robotics'],
+    tags: ['LLM evaluation', 'AI agents', 'Benchmarking', 'Computer vision'],
     zone: 'T. rex paddock',
   },
   {
@@ -299,13 +299,16 @@ export const press: Press[] = [
   },
 ];
 
+// Mirrors the Skills section of the resume PDF.
 export const skills: { group: string; items: string[] }[] = [
-  { group: 'Languages', items: ['Python', 'TypeScript', 'JavaScript', 'Java', 'SQL'] },
-  { group: 'Frameworks', items: ['React', 'Vue', 'Angular', 'Node.js/Express', 'Flask'] },
-  { group: 'AI/ML', items: ['PyTorch', 'scikit-learn', 'pandas', 'NumPy', 'OpenAI API'] },
-  { group: 'Data & Search', items: ['PostgreSQL', 'OpenSearch', 'SQL Server', 'MongoDB'] },
-  { group: 'Cloud & Tools', items: ['S3', 'Lambda', 'Docker', 'Linux', 'Git', 'GitHub', 'Jira'] },
-  { group: 'Testing', items: ['Vitest', 'Playwright', 'Selenium', 'Appium', 'LambdaTest'] },
+  { group: 'Languages', items: ['Python', 'TypeScript', 'JavaScript', 'Java', 'SQL', 'C'] },
+  { group: 'Data', items: ['PostgreSQL', 'OpenSearch', 'SQL Server', 'SQLite'] },
+  { group: 'Frameworks', items: ['FastAPI', 'Flask', 'Node/Express', 'React', 'Vue', 'Angular'] },
+  { group: 'AI/ML', items: ['LLM Evaluation', 'PyTorch', 'Scikit-Learn', 'Computer Vision'] },
+  {
+    group: 'Tools',
+    items: ['Docker', 'Git', 'Linux', 'Pytest', 'Playwright', 'Selenium', 'Appium', 'Azure', 'Amazon Web Services'],
+  },
 ];
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
