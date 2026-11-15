@@ -1,4 +1,4 @@
-/* Recruiter View styles. Palette follows the PRD: sandstone, soil, jungle
+/* Portfolio styles. Palette follows the PRD: sandstone, soil, jungle
    green accent, sunset-orange call to action. Pixel font for headings only. */
 
 :root {
@@ -403,7 +403,7 @@ main:focus {
 
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   /* The contact card stays put; only content cards lift. */
-  .card:not(.contact-card):hover {
+  .card:not(.contact-card):not(.exhibit):hover {
     transform: translate(-2px, -2px);
     box-shadow: 7px 7px 0 var(--card-shadow);
   }
@@ -841,4 +841,399 @@ main:focus {
   border-top: 1px solid rgba(185, 200, 224, 0.14);
   color: var(--hud-ink-2);
   font-size: 0.9rem;
+}
+
+/* ---------- Choktopia park (beta) ---------- */
+
+.btn-park .footprint {
+  width: 18px;
+  height: 18px;
+}
+
+/* Full-screen below the top bar, so resume and contact stay one click away. */
+.park {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  overflow: hidden;
+  background: var(--navy);
+}
+
+.park-host {
+  position: absolute;
+  inset: 0;
+}
+
+.park-host canvas {
+  display: block;
+}
+
+.park-bar {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.park-title {
+  font-family: var(--font-pixel);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.park-help {
+  position: absolute;
+  left: 50%;
+  bottom: 12px;
+  z-index: 2;
+  max-width: calc(100% - 24px);
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: rgba(8, 18, 38, 0.75);
+  color: var(--ink-2);
+  font-size: 0.85rem;
+  text-align: center;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+@media (hover: none) {
+  .park-help-desktop {
+    display: none;
+  }
+}
+
+.park-prompt {
+  position: absolute;
+  left: 50%;
+  bottom: 56px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 14px;
+  border: 2px solid var(--card-border);
+  border-radius: var(--radius);
+  background: var(--navy);
+  box-shadow: 4px 4px 0 var(--card-shadow);
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.park-prompt-name {
+  font-family: var(--font-pixel);
+  font-weight: 600;
+}
+
+.park-loading {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  color: #b9c8e0;
+  font-family: var(--font-pixel);
+  font-size: 1.2rem;
+}
+
+.park-loading-fixed {
+  position: fixed;
+  top: 60px;
+  z-index: 9;
+  background: var(--navy);
+}
+
+.exhibit-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(5, 11, 24, 0.6);
+}
+
+.exhibit {
+  width: min(600px, 100%);
+  max-height: calc(100% - 16px);
+  overflow: auto;
+  background: #13264c;
+}
+
+.exhibit h2 {
+  margin-top: 6px;
+  font-family: var(--font-pixel);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.exhibit-facts {
+  margin: 14px 0 0;
+}
+
+.exhibit-facts dt {
+  color: var(--accent);
+  font-family: var(--font-pixel);
+  font-size: 0.9rem;
+}
+
+.exhibit-facts dd {
+  margin: 2px 0 10px;
+}
+
+.exhibit-close {
+  margin-top: 20px;
+}
+
+.park-bar {
+  flex-wrap: wrap;
+  right: 12px;
+}
+
+.park-stamps {
+  margin-left: auto;
+  padding: 2px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink-2);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.exhibit-note {
+  margin-top: 10px;
+  color: var(--ink-2);
+}
+
+.exhibit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+/* Map / fast-travel menu */
+.map-group {
+  margin-top: 16px;
+}
+
+.map-group h3 {
+  margin-bottom: 6px;
+  color: var(--accent);
+  font-family: var(--font-pixel);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.map-group ul {
+  display: grid;
+  gap: 6px;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 560px) {
+  .map-group ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.map-stop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ink);
+  font: inherit;
+  font-size: 0.92rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.map-stop:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.map-stamp {
+  color: var(--cta);
+  font-weight: 700;
+}
+
+.section-aside {
+  margin: -16px 0 24px;
+  font-weight: 600;
+}
+
+.section-aside a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+/* Keep the park controls legible over busy pixel art. */
+.park-bar {
+  right: auto;
+  max-width: calc(100% - 24px);
+  padding: 6px 8px;
+  border-radius: var(--radius);
+  background: rgba(15, 31, 61, 0.92);
+  box-shadow: 3px 3px 0 rgba(5, 11, 24, 0.5);
+}
+
+.park-bar .btn-secondary {
+  background: var(--navy);
+}
+
+.park-stamps {
+  margin-left: 0;
+}
+
+/* ---------- Park map (Stardew-style) ---------- */
+
+.map-menu {
+  width: min(880px, 100%);
+}
+
+.map-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 16px;
+}
+
+/* The map picture in a wooden frame; pins are positioned in % of it. */
+.park-map {
+  position: relative;
+  margin-top: 14px;
+  border: 6px solid #86562f;
+  border-radius: 6px;
+  outline: 2px solid #2b2236;
+  box-shadow: 0 0 0 4px #b37a45 inset, 5px 5px 0 #050b18;
+  background: #62b04a;
+  line-height: 0;
+}
+
+.park-map-img {
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+.map-pin {
+  position: absolute;
+  z-index: 1;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  padding: 0;
+  border: 2px solid #2b2236;
+  border-radius: 50%;
+  background: #f5c242;
+  box-shadow: 0 2px 0 rgba(5, 11, 24, 0.45);
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.map-pin.is-visited {
+  background: #8fd36a;
+}
+
+.map-pin.is-visited::after {
+  content: '✓';
+  display: block;
+  color: #2b2236;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 12px;
+  text-align: center;
+}
+
+.map-pin:hover,
+.map-pin:focus-visible {
+  z-index: 3;
+  transform: scale(1.3);
+}
+
+.map-pin-label {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 6px);
+  padding: 3px 8px;
+  border: 2px solid #2b2236;
+  border-radius: 4px;
+  background: #fffaf0;
+  color: #2b2236;
+  font-family: var(--font-pixel);
+  font-size: 0.72rem;
+  line-height: 1.3;
+  white-space: nowrap;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.map-pin:hover .map-pin-label,
+.map-pin:focus-visible .map-pin-label {
+  opacity: 1;
+}
+
+/* "You are here": the ranger sprite, gently bobbing. */
+.map-you {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  justify-items: center;
+  transform: translate(-50%, -85%);
+  pointer-events: none;
+}
+
+.map-you img {
+  width: 32px;
+  height: 40px;
+  image-rendering: pixelated;
+}
+
+.map-you span {
+  margin-top: 2px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: #c0533f;
+  color: #fff;
+  font-family: var(--font-pixel);
+  font-size: 0.68rem;
+  line-height: 1.4;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .map-you img {
+    animation: map-you-bob 1.2s ease-in-out infinite;
+  }
+}
+
+@keyframes map-you-bob {
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.park-help {
+  transition: opacity 0.6s ease;
+}
+
+.park-help.is-faded {
+  opacity: 0;
 }
