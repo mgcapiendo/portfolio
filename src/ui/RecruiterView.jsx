@@ -86,6 +86,10 @@ const Hero = () => {
             <MailIcon />
             Email me
           </a>
+          <a className="btn btn-secondary btn-park" href="#park">
+            <span className="footprint" aria-hidden="true" />
+            Explore Choktopia
+          </a>
         </div>
 
         <dl className="facts">
@@ -135,6 +139,9 @@ const Experience = () => (
   <section id="experience" className="section" aria-labelledby="experience-h">
     <div className="wrap">
       <SectionHead id="experience-h" title="Experience" />
+      <p className="section-aside">
+        <a href="#park">Prefer a more interactive experience? Explore my page in Choktopia →</a>
+      </p>
 
       <ol className="role-list">
         {roles.map((role) => (
@@ -337,8 +344,7 @@ const RecruiterView = () => (
     <footer className="footer">
       <div className="wrap">
         <p>
-          © {new Date().getFullYear()} {profile.name}. Choktopia, a walkable pixel-art version of this site,
-          is under construction.
+          © {new Date().getFullYear()} {profile.name}
         </p>
       </div>
     </footer>
