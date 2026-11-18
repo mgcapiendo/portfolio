@@ -11,6 +11,7 @@ import {
   roles,
   skills,
 } from '../content/content';
+import EmailLink from './EmailLink';
 import HeroCursor from './HeroCursor';
 import HeroScene from './HeroScene';
 import { FileIcon, GitHubIcon, LinkedInIcon, MailIcon } from './Icons';
@@ -82,10 +83,7 @@ const Hero = () => {
             <FileIcon />
             View resume
           </a>
-          <a className="btn btn-secondary" href={`mailto:${profile.email}`}>
-            <MailIcon />
-            Email me
-          </a>
+          <EmailLink className="btn btn-secondary" icon={<MailIcon />} label="Email me" copiedLabel="Email copied" />
           <a className="btn btn-secondary btn-park" href="#park">
             <span className="footprint" aria-hidden="true" />
             Explore Choktopia
@@ -308,9 +306,7 @@ const Contact = () => (
           Open to full-time {profile.roles.join(' and ')} roles. The fastest way to reach me is email.
         </p>
         <div className="email-row">
-          <a className="email-link" href={`mailto:${profile.email}`}>
-            {profile.email}
-          </a>
+          <EmailLink className="email-link" label={profile.email} />
           <CopyEmail />
         </div>
         <div className="contact-links">

@@ -1,4 +1,5 @@
 import { profile } from '../content/content';
+import EmailLink from './EmailLink';
 import { FileIcon, GitHubIcon, LinkedInIcon, MailIcon } from './Icons';
 
 const SECTIONS = [
@@ -34,10 +35,12 @@ const Hud = () => (
           <GitHubIcon />
           <span className="icon-label">GitHub</span>
         </a>
-        <a className="icon-link" href={`mailto:${profile.email}`}>
-          <MailIcon />
-          <span className="icon-label">Email</span>
-        </a>
+        <EmailLink
+          className="icon-link"
+          icon={<MailIcon />}
+          label={<span className="icon-label">Email</span>}
+          copiedLabel={<span className="icon-label">Copied</span>}
+        />
         <a className="btn btn-cta btn-sm" href={profile.resume} target="_blank" rel="noreferrer">
           <FileIcon />
           Resume
