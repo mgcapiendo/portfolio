@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   certifications,
   education,
@@ -11,7 +10,7 @@ import {
   roles,
   skills,
 } from '../content/content';
-import EmailLink from './EmailLink';
+import EmailLink, { CopyEmailButton } from './EmailLink';
 import HeroCursor from './HeroCursor';
 import HeroScene from './HeroScene';
 import { FileIcon, GitHubIcon, LinkedInIcon, MailIcon } from './Icons';
@@ -274,29 +273,6 @@ const Skills = () => (
   </section>
 );
 
-const CopyEmail = () => {
-  const [copied, setCopied] = useState(false);
-
-  const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(profile.email);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      window.location.href = `mailto:${profile.email}`;
-    }
-  };
-
-  return (
-    <button type="button" className="btn btn-secondary btn-sm" onClick={copy}>
-      {copied ? 'Copied!' : 'Copy'}
-      <span className="sr-only" aria-live="polite">
-        {copied ? 'Email address copied' : ''}
-      </span>
-    </button>
-  );
-};
-
 const Contact = () => (
   <section id="contact" className="section band-navy" aria-labelledby="contact-h">
     <div className="wrap">
@@ -307,7 +283,7 @@ const Contact = () => (
         </p>
         <div className="email-row">
           <EmailLink className="email-link" label={profile.email} />
-          <CopyEmail />
+          <CopyEmailButton className="btn btn-secondary btn-sm" />
         </div>
         <div className="contact-links">
           <a className="btn btn-cta" href={profile.resume} target="_blank" rel="noreferrer">

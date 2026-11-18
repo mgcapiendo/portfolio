@@ -33,3 +33,14 @@ test('email me copies the address and still opens mail', async ({ page, context 
 
   await expect(page.locator('.hero').getByRole('link', { name: 'Email me' })).toBeVisible({ timeout: 5000 });
 });
+
+test('the contact Copy button shows the same copied message', async ({ page, context }) => {
+  await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+  await page.goto('/#contact');
+
+  await page.locator('#contact').getByRole('button', { name: 'Copy' }).click();
+
+  await expect(page.getByRole('status').filter({ hasText: 'Email address copied' })).toBeVisible();
+  await expect(page.locator('#contact').getByRole('button', { name: 'Copied!' })).toBeVisible();
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe('manuelgcapiendo@gmail.com');
+});
