@@ -15,3 +15,21 @@ test('portfolio page shows the essentials on load', async ({ page }) => {
   );
   expect(overflow).toBe(0);
 });
+
+// mailto: does nothing without a default mail app, so the email buttons also
+// copy the address and say so. The mail app still gets its chance to open.
+test('email me copies the address and still opens mail', async ({ page, context }) => {
+  await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+  await page.goto('/');
+
+  const mailto = page.waitForRequest((request) => request.url().startsWith('mailto:'));
+  await page.getByRole('link', { name: 'Email me' }).click();
+  await mailto;
+
+  await expect(page.getByRole('status').filter({ hasText: 'Email address copied' })).toBeVisible();
+  await expect(page.locator('.hero').getByRole('link', { name: 'Email copied' })).toBeVisible();
+  const copied = await page.evaluate(() => navigator.clipboard.readText());
+  expect(copied).toBe('manuelgcapiendo@gmail.com');
+
+  await expect(page.locator('.hero').getByRole('link', { name: 'Email me' })).toBeVisible({ timeout: 5000 });
+});

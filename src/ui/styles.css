@@ -1225,3 +1225,50 @@ main:focus {
 .park-help.is-faded {
   opacity: 0;
 }
+
+/* "Email address copied" toast: shown by every email link, since mailto:
+   alone does nothing on computers without a default mail app. */
+.email-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 100;
+  /* left: 50% alone would cap the width at half the screen. */
+  width: max-content;
+  max-width: calc(100% - 32px);
+  padding: 10px 16px;
+  border: 2px solid var(--card-border);
+  border-radius: var(--radius);
+  background: var(--navy);
+  box-shadow: 4px 4px 0 var(--card-shadow);
+  color: var(--ink);
+  font-size: 0.95rem;
+  text-align: center;
+  overflow-wrap: break-word;
+  opacity: 0;
+  transform: translate(-50%, 8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+
+.email-toast:empty {
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+.email-toast.is-shown {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.email-toast strong {
+  color: var(--cta);
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .email-toast {
+    transition: none;
+  }
+}

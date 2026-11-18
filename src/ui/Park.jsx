@@ -15,6 +15,7 @@ import { emit, on } from '../game/bus';
 import { isSoundOn, setSound, sfx } from '../game/sound';
 import { MAP_SIZE, parkMapImage, youIcon } from '../game/art/parkMap';
 import { EXHIBITS, GROUPS, TILE } from '../game/map';
+import EmailLink from './EmailLink';
 import { FileIcon, GitHubIcon, LinkedInIcon, MailIcon } from './Icons';
 
 // Choktopia: the walkable park. Phaser draws the world into the host
@@ -198,10 +199,7 @@ const PANELS = {
           <FileIcon />
           View resume
         </a>
-        <a className="btn btn-secondary btn-sm" href={`mailto:${profile.email}`}>
-          <MailIcon />
-          {profile.email}
-        </a>
+        <EmailLink className="btn btn-secondary btn-sm" icon={<MailIcon />} label={profile.email} />
         <a className="btn btn-secondary btn-sm" href={profile.linkedin} target="_blank" rel="noreferrer">
           <LinkedInIcon />
           LinkedIn
@@ -358,10 +356,7 @@ const CompleteCard = ({ onClose }) => (
         <FileIcon />
         View resume
       </a>
-      <a className="btn btn-secondary btn-sm" href={`mailto:${profile.email}`}>
-        <MailIcon />
-        Email me
-      </a>
+      <EmailLink className="btn btn-secondary btn-sm" icon={<MailIcon />} label="Email me" copiedLabel="Email copied" />
       <a className="btn btn-secondary btn-sm" href={profile.linkedin} target="_blank" rel="noreferrer">
         <LinkedInIcon />
         LinkedIn

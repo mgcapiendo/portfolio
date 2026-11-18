@@ -53,7 +53,7 @@ export const profile = {
   roles: ['AI/ML Engineer', 'Software Engineer'],
   location: 'Orlando, FL',
   intro:
-    "I'm a Computer Science and Artificial Intelligence student who's explored a range of exciting technical challenges through six internships, including my current work at Universal.",
+    "I'm a Computer Science and Artificial Intelligence student with experience taking on exciting challenges through six internships, including my current role at Universal.",
   bio: "What drew me to software engineering is how there's almost no limit to what you can build or the impact it can have.",
   email: 'manuelgcapiendo@gmail.com',
   resume: '/ManuelCapiendo_Resume.pdf',
